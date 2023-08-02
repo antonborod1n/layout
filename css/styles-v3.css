@@ -4557,8 +4557,10 @@ div.object-see-other button {
   min-width: 165px;
   margin-left: 16px;
 }
-.dialog-search-box {
+.dialog-search {
   margin-bottom: 24px;
+}
+.dialog-search-box {
   border: 1px solid #d6e0e4;
   border-radius: 3px;
 }
@@ -4796,6 +4798,53 @@ div.object-see-other button {
     padding-right: 15px;
     border-radius: 0;
   }
+}
+.tips {
+  display: none;
+}
+.tips.is-active {
+  display: block;
+  width: 100%;
+  padding: 9px 8px;
+  border-radius: 0px 0px 3px 3px;
+  border: 1px solid #d6e0e4;
+  background: #fff;
+  margin-top: -1px;
+  transition: background-color 0.3s linear;
+}
+.tips:hover {
+  background-color: rgba(65, 146, 217, 0.1);
+}
+.tips__list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
+}
+.tips__item {
+  position: relative;
+  margin: 0;
+}
+.tips__item:after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: -14px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-width: 4px 0 4px 8px;
+  border-left-color: #d6e0e4;
+}
+.tips__item:last-child::after {
+  display: none;
+}
+.tips__btn {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #2d2d2d;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 .page-filter {
   margin: 24px 0;

@@ -4519,8 +4519,10 @@ div.object-see-other button {
   min-width: 165px;
   margin-left: 16px;
 }
-.dialog-search-box {
+.dialog-search {
   margin-bottom: 24px;
+}
+.dialog-search-box {
   border: 1px solid #d6e0e4;
   border-radius: 3px;
 }
@@ -4759,6 +4761,53 @@ div.object-see-other button {
     border-radius: 0;
   }
 }
+.tips {
+  display: none;
+}
+.tips.is-active {
+  display: block;
+  width: 100%;
+  padding: 9px 8px;
+  border-radius: 0px 0px 3px 3px;
+  border: 1px solid #d6e0e4;
+  background: #fff;
+  margin-top: -1px;
+  transition: background-color 0.3s linear;
+}
+.tips:hover {
+  background-color: rgba(65, 146, 217, 0.1);
+}
+.tips__list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
+}
+.tips__item {
+  position: relative;
+  margin: 0;
+}
+.tips__item:after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: -14px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-width: 4px 0 4px 8px;
+  border-left-color: #d6e0e4;
+}
+.tips__item:last-child::after {
+  display: none;
+}
+.tips__btn {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #2d2d2d;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 body {
   background: #fcfcfd;
 }
@@ -4856,3 +4905,54 @@ body {
     width: 100%;
   }
 }
+
+/* .right-container {
+  position: fixed;
+  left: 50%;
+  bottom: 50%;
+}
+#icon-chat {
+  font-size: 30px;
+}
+.right-container .right-container-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #00a750;
+  transition: all 300ms;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  font-family: roboto, sans-serif;
+}
+.right-container .right-container-button span {
+  color: white;
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  line-height: 28px;
+}
+.right-container .right-container-button:hover {
+  transition: all 400ms cubic-bezier(0.62, 0.1, 0.5, 1);
+  width: 250px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.right-container .right-container-button .long-text {
+  transition: opacity 1000ms;
+  opacity: 0;
+  color: white;
+  white-space: nowrap;
+  font-size: 0;
+  width: 0;
+  margin: 0;
+}
+.right-container .right-container-button .long-text.show-long-text {
+  transition: opacity 700ms, width 1ms linear 270ms, font-size 1ms linear 270ms;
+  opacity: 1;
+  margin-left: 45px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  width: auto;
+} */

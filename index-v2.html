@@ -1607,6 +1607,15 @@
           </div>
 
           <button type="button" class="side-add-btn"></button>
+
+          <!-- <div class="right-container">
+            <button class="right-container-button">
+              <span class="short-text">
+                <i class="material-icons" id="icon-chat"></i>
+              </span>
+              <span class="long-text">ПОДАТЬ ПРЕДЛОЖЕНИЕ</span>
+            </button>
+          </div> -->
         </div>
       </main>
 
@@ -1867,8 +1876,10 @@
 
     <div id="dialog-2" style="display: none">
       <h2>Добавить фильтры</h2>
-      <div class="dialog-search-box">
-        <input type="text" placeholder="Искать" class="dialog-search-box__input" />
+      <div class="dialog-search">
+        <div class="dialog-search-box">
+          <input type="text" placeholder="Искать" class="dialog-search-box__input" />
+        </div>
       </div>
       <div class="dialog-cols">
         <div class="dialog-cols__col">
@@ -1950,8 +1961,26 @@
 
     <div id="dialog-3" style="display: none">
       <h2>Выберите географию</h2>
-      <div class="dialog-search-box">
-        <input type="text" placeholder="Искать" class="dialog-search-box__input" />
+      <div class="dialog-search">
+        <div class="dialog-search-box">
+          <input type="text" placeholder="Искать" class="dialog-search-box__input" />
+        </div>
+        <div class="dialog-search-tips tips is-active">
+          <ul class="tips__list">
+            <li class="tips__item">
+              <button class="tips__btn" href="#">Россия (<span>10 307</span>)</button>
+            </li>
+            <li class="tips__item">
+              <button class="tips__btn" href="#">Вологодская область (<span>55</span>)</button>
+            </li>
+            <li class="tips__item">
+              <button class="tips__btn" href="#">Череповецкий район (<span>19</span>)</button>
+            </li>
+            <li class="tips__item">
+              <button class="tips__btn" href="#">Череповец (<span>19</span>)</button>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="dialog-cols">
         <div class="dialog-cols__col">

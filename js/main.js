@@ -54,8 +54,9 @@ function ADialog(e) {
         'function' == typeof o.dialogOptions.onOpen && o.dialogOptions.onOpen(o);
     }, 0);
 }
-const elem = document.querySelectorAll('.small-carousel__item');
 
+//активный элемент
+const elem = document.querySelectorAll('.small-carousel__item');
 elem.forEach((item) => {
   item.addEventListener('click', function () {
     elem.forEach((element) => {
@@ -275,3 +276,13 @@ $(function () {
         $(e.target).closest('.with-dpd').toggleClass('with-dpd--opened');
       });
 });
+
+//кнопка
+$('.right-container-button').hover(
+  function () {
+    $('.long-text').addClass('show-long-text');
+  },
+  function () {
+    $('.long-text').removeClass('show-long-text');
+  },
+);
