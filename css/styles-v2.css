@@ -4487,6 +4487,7 @@ div.object-see-other button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -4494,9 +4495,29 @@ div.object-see-other button {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+.c-dialog__foot .btn-clear {
+  display: inline-flex;
+  background-color: #ffffff;
+  color: #4192d9;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 9px 21px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  border-radius: 3px;
+  border: 1px solid #4192d9;
+  margin-left: auto;
+  transition: background-color 0.3s linear;
+}
+.c-dialog__foot .btn-clear:hover {
+  background-color: #edf2f7;
+  text-decoration: none;
+}
 .c-dialog__foot .btn-primary {
   min-width: 165px;
-  margin-left: auto;
+  margin-left: 16px;
 }
 .dialog-search-box {
   margin-bottom: 24px;
