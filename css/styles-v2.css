@@ -2287,6 +2287,9 @@ body.is-modal-opened {
   border-width: 4px 0 4px 8px;
   border-left-color: #d6e0e4;
 }
+.mobile-modal__link::after {
+  display: none;
+}
 .mobile-modal__options li {
   margin: 0 0 2px;
   padding: 12px 15px;
