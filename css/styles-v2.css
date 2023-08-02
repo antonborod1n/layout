@@ -4530,6 +4530,7 @@ div.object-see-other button {
   height: 34px;
   padding: 8px;
   border: 0;
+  color: #2d2d2d;
   background: #fff url(../images/icon-search2.svg) 100% 50% no-repeat;
   outline: none;
 }
