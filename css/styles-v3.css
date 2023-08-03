@@ -5121,6 +5121,9 @@ div.object-see-other button {
   align-items: center;
   gap: 24px;
 }
+.cost-calc__category-btn.btn2 {
+  display: none;
+}
 .btn1 {
   display: inline-flex;
   align-items: center;
@@ -5174,6 +5177,9 @@ div.object-see-other button {
   .cost-calc .dialog-cols,
   .cost-calc__choice {
     display: none;
+  }
+  .cost-calc__category-btn.btn2 {
+    display: inline-flex;
   }
   .cost-calc__category .btn2 {
     width: 100%;
