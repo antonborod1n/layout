@@ -55,19 +55,6 @@ function ADialog(e) {
     }, 0);
 }
 
-//активный элемент
-const elem = document.querySelectorAll('.small-carousel__item');
-elem.forEach((item) => {
-  item.addEventListener('click', function () {
-    elem.forEach((element) => {
-      if (element.classList.contains('is-active')) {
-        element.classList.remove('is-active');
-      }
-    });
-    item.classList.add('is-active');
-  });
-});
-
 $(function () {
   function e(e, o) {
     var s = 1 < arguments.length && void 0 !== o ? o : {};
@@ -277,12 +264,39 @@ $(function () {
       });
 });
 
-//кнопка
-$('.right-container-button').hover(
-  function () {
-    $('.long-text').addClass('show-long-text');
-  },
-  function () {
-    $('.long-text').removeClass('show-long-text');
-  },
-);
+window.addEventListener('DOMContentLoaded', () => {
+  const devBlockDialogCalc = document.querySelector('.dev-block__dialog-calc');
+  const costCalc = document.querySelector('.cost-calc');
+  const citySearchTips = document.querySelector('.cost-calc__city-tips');
+  const sitySearchInput = document.querySelector('.cost-calc__input');
+
+  sitySearchInput.addEventListener('click', function () {
+    citySearchTips.classList.toggle('is-active');
+  });
+  devBlockDialogCalc.addEventListener('click', function () {
+    costCalc.classList.toggle('is-active');
+  });
+
+  //кнопка
+  $('.right-container-button').hover(
+    function () {
+      $('.long-text').addClass('show-long-text');
+    },
+    function () {
+      $('.long-text').removeClass('show-long-text');
+    },
+  );
+
+  //активный элемент
+  const elem = document.querySelectorAll('.small-carousel__item');
+  elem.forEach((item) => {
+    item.addEventListener('click', function () {
+      elem.forEach((element) => {
+        if (element.classList.contains('is-active')) {
+          element.classList.remove('is-active');
+        }
+      });
+      item.classList.add('is-active');
+    });
+  });
+});
