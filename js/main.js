@@ -265,16 +265,11 @@ $(function () {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  const devBlockDialogCalc = document.querySelector('.dev-block__dialog-calc');
-  const costCalc = document.querySelector('.cost-calc');
   const citySearchTips = document.querySelector('.cost-calc__city-tips');
   const sitySearchInput = document.querySelector('.cost-calc__input');
 
   sitySearchInput.addEventListener('click', function () {
     citySearchTips.classList.toggle('is-active');
-  });
-  devBlockDialogCalc.addEventListener('click', function () {
-    costCalc.classList.toggle('is-active');
   });
 
   //кнопка

@@ -4848,19 +4848,7 @@ div.object-see-other button {
   cursor: pointer;
 }
 .cost-calc {
-  position: absolute;
-  top: 210px;
-  left: 0;
-  right: 0;
-  z-index: 5;
   background-color: #fcfcfd;
-  padding: 36px 0 46px;
-}
-
-.cost-calc .container {
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 .cost-calc {
   display: none;
@@ -4902,7 +4890,7 @@ div.object-see-other button {
   cursor: auto;
 }
 .cost-calc__title {
-  color: var(--unnamed, #2d2d2d);
+  color: #2d2d2d;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
@@ -5010,7 +4998,7 @@ div.object-see-other button {
   gap: 20px;
 }
 .cost-calc__main {
-  width: 673px;
+  width: 100%;
 }
 .cost-calc__block {
   padding: 16px;
@@ -5109,7 +5097,7 @@ div.object-see-other button {
 .cost-calc__choice-item:last-child:after {
   display: none;
 }
-.cost-calc__title {
+.cost-calc__subtitle {
   margin-bottom: 8px;
   color: #2d2d2d;
   font-size: 13px;
