@@ -4847,15 +4847,6 @@ div.object-see-other button {
   background-color: transparent;
   cursor: pointer;
 }
-.cost-calc {
-  background-color: #fcfcfd;
-}
-.cost-calc {
-  display: none;
-}
-.cost-calc.is-active {
-  display: block;
-}
 .breadcrumbs-main {
   margin-bottom: 3px;
   color: #9da8ad;

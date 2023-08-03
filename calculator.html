@@ -689,7 +689,9 @@
           </div>
           <ul class="mobile-modal__nav">
             <li>
-              <a href="#" data-open-modal="modal-calc3">Одежда, обувь и аксессуары (<span>440</span>)</a>
+              <a href="#" data-open-modal="modal-calc3"
+                >Одежда, обувь и аксессуары (<span>440</span>)</a
+              >
             </li>
             <li>
               <a href="#" data-open-modal="modal-calc3">Продукты (<span>149</span>)</a>
@@ -704,7 +706,9 @@
               <a href="#" data-open-modal="modal-calc3">Красота и здоровье (<span>67</span>)</a>
             </li>
             <li>
-              <a href="#" data-open-modal="modal-calc3">Подарки, сувениры и цветы (<span>50</span>)</a>
+              <a href="#" data-open-modal="modal-calc3"
+                >Подарки, сувениры и цветы (<span>50</span>)</a
+              >
             </li>
             <li>
               <a href="#" data-open-modal="modal-calc3">Мебель (<span>45</span>)</a>
@@ -716,7 +720,9 @@
               <a href="#" data-open-modal="modal-calc3">Нестандартные форматы (<span>31</span>)</a>
             </li>
             <li>
-              <a href="#" data-open-modal="modal-calc3">Компьютеры и аксессуары (<span>22</span>)</a>
+              <a href="#" data-open-modal="modal-calc3"
+                >Компьютеры и аксессуары (<span>22</span>)</a
+              >
             </li>
             <li>
               <a href="#" data-open-modal="modal-calc3">Опт и дистрибуция (<span>20</span>)</a>
@@ -824,11 +830,12 @@
         </div>
       </div>
 
-      <main>
-        <div class="container">
-          <div class="cost-calc is-active">
+      <main class="main">
+        <section class="cost-calc">
+          <div class="container">
+            <div class="cost-calc__inner">
               <div class="breadcrumbs-main">
-                <ul class="breadcrumbs-main__list">
+                <ol class="breadcrumbs-main__list">
                   <li class="breadcrumbs-main__item">
                     <a class="breadcrumbs-main__link" href="#">Главная</a>
                   </li>
@@ -837,12 +844,15 @@
                       >Kaлькyлятop cтoимocти бизнeca</span
                     >
                   </li>
-                </ul>
+                </ol>
               </div>
+
               <h2 class="cost-calc__title">Kaлькyлятop cтoимocти бизнeca</h2>
               <div class="cost-calc__layout">
                 <aside class="cost-calc__aside">
-                  <div class="cost-calc__aside-desc">Текущая точность результата:<span>25%</span></div>
+                  <div class="cost-calc__aside-desc">
+                    Текущая точность результата:<span>25%</span>
+                  </div>
                   <p class="cost-calc__aside-text">
                     Чем больше информации представлено, тем больше точность экспресс-оценки
                   </p>
@@ -856,19 +866,29 @@
                         <div class="cost-calc__city-tips">
                           <ul class="cost-calc__tips-list">
                             <li class="cost-calc__tips-item">
-                              <button class="cost-calc__tips-btn" href="#">Санкт-Петербург, <span>Россия</span></button>
+                              <button class="cost-calc__tips-btn">
+                                Санкт-Петербург, <span>Россия</span>
+                              </button>
                             </li>
                             <li class="cost-calc__tips-item">
-                              <button class="cost-calc__tips-btn" href="#">Самара, <span>Россия</span</button>
+                              <button class="cost-calc__tips-btn">
+                                Самара, <span>Россия</span>
+                              </button>
                             </li>
                             <li class="cost-calc__tips-item">
-                              <button class="cost-calc__tips-btn" href="#">Самарканд, <span>Узбекистан</span</button>
+                              <button class="cost-calc__tips-btn">
+                                Самарканд, <span>Узбекистан</span>
+                              </button>
                             </li>
                             <li class="cost-calc__tips-item">
-                              <button class="cost-calc__tips-btn" href="#">Саратов, <span>Россия</span</button>
+                              <button class="cost-calc__tips-btn">
+                                Саратов, <span>Россия</span>
+                              </button>
                             </li>
                             <li class="cost-calc__tips-item">
-                              <button class="cost-calc__tips-btn" href="#">Саранск, <span>Россия</span</button>
+                              <button class="cost-calc__tips-btn">
+                                Саранск, <span>Россия</span>
+                              </button>
                             </li>
                           </ul>
                         </div>
@@ -944,7 +964,9 @@
                           <li class="cost-calc__choice-item">Птицеводство</li>
                         </ul>
                       </div>
-                      <button class="cost-calc__category-btn btn2" data-open-modal="modal-calc">Выбрать категорию</button>
+                      <button class="cost-calc__category-btn btn2" data-open-modal="modal-calc">
+                        Выбрать категорию
+                      </button>
                     </div>
                     <div class="cost-calc__block cost-calc__revenue">
                       <h2 class="cost-calc__subtitle">Выручка</h2>
@@ -952,7 +974,7 @@
                         <div class="cost-calc__block-box">
                           <input class="cost-calc__input-price" type="text" placeholder="1000" />
                           <div class="cost-calc__select-box cost-calc__select-carrancy">
-                            <select class="cost-calc__select" name="calc-carrancy" id="carrancy">
+                            <select class="cost-calc__select" name="calc-carrancy">
                               <option value="rub">pyб. (RUB)</option>
                               <option value="usd">usd (USD)</option>
                               <option value="eur">eur (EUR)</option>
@@ -964,7 +986,6 @@
                             <select
                               class="cost-calc__select cost-calc__select-time"
                               name="calc-carrancy"
-                              id="carrancy"
                             >
                               <option value="month">В месяц</option>
                               <option value="year">В год</option>
@@ -992,7 +1013,6 @@
                             <select
                               class="cost-calc__select cost-calc__select-time"
                               name="calc-carrancy"
-                              id="carrancy"
                             >
                               <option value="month">В месяц</option>
                               <option value="year">В год</option>
@@ -1008,14 +1028,14 @@
                         <div class="cost-calc__block-box">
                           <input class="cost-calc__input-price" type="text" placeholder="1000" />
                           <div class="cost-calc__select-box cost-calc__select-carrancy">
-                            <select class="cost-calc__select" name="calc-carrancy" id="carrancy">
+                            <select class="cost-calc__select" name="calc-carrancy">
                               <option value="rub">pyб. (RUB)</option>
                               <option value="usd">usd (USD)</option>
                               <option value="eur">eur (EUR)</option>
                             </select>
                           </div>
                         </div>
-      
+
                         <p class="cost-calc__text">
                           Cyммa любыx дeнeжныx oбязaтeльcтв пepeд тpeтьими лицaми
                         </p>
@@ -1029,7 +1049,12 @@
                 </div>
               </div>
             </div>
-        </div>
+
+            <div class="scroll-top__container">
+              <button type="button" class="scroll-top__btn"></button>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
@@ -1232,8 +1257,8 @@
         </div>
       </footer>
     </div>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
     <div id="dialog-1" style="display: none">
       <h2>Добавить фильтры</h2>
       <div class="dialog-cols">
@@ -1381,16 +1406,16 @@
         <div class="dialog-search-tips tips is-active">
           <ul class="tips__list">
             <li class="tips__item">
-              <button class="tips__btn" href="#">Россия (<span>10 307</span>)</button>
+              <button class="tips__btn">Россия (<span>10 307</span>)</button>
             </li>
             <li class="tips__item">
-              <button class="tips__btn" href="#">Вологодская область (<span>55</span>)</button>
+              <button class="tips__btn">Вологодская область (<span>55</span>)</button>
             </li>
             <li class="tips__item">
-              <button class="tips__btn" href="#">Череповецкий район (<span>19</span>)</button>
+              <button class="tips__btn">Череповецкий район (<span>19</span>)</button>
             </li>
             <li class="tips__item">
-              <button class="tips__btn" href="#">Череповец (<span>19</span>)</button>
+              <button class="tips__btn">Череповец (<span>19</span>)</button>
             </li>
           </ul>
         </div>
