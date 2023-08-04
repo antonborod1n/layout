@@ -5645,3 +5645,113 @@ main h1 {
   height: 36px;
   padding: 0 24px;
 }
+.dialog__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #2d2d2d;
+}
+.dialog__box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.dialog__btn {
+  color: #2d2d2d;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 9px 30px;
+  border: none;
+}
+.dialog__btn1 {
+  background-color: rgba(214, 224, 228, 0.2);
+}
+.dialog__btn.dialog__btn2 {
+  color: #4192d9;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(214, 224, 228, 0.2);
+}
+.dialog__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #2d2d2d;
+}
+.dialog__link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #4192d9;
+}
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.question__items {
+  position: relative;
+  padding: 16px;
+  border-radius: 3px;
+  border: 1px solid #d6e0e4;
+}
+.question__title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #2d2d2d;
+}
+.question__title::after {
+  content: url('../images/icon-arrow-bottom.svg');
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  transition: all 0.5s;
+  transform: rotate(180deg);
+}
+.question__title.is-active::after {
+  transform: rotate(0px);
+  transition: all 0.5s;
+}
+.question__item-text {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  color: #2d2d2d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.question__item-text.is-active {
+  opacity: 1;
+  margin: 20px 0;
+  visibility: visible;
+}
+.dialog__inner {
+}
+.dialog__title {
+}
+.dialog__box {
+}
+.dialog__btn {
+}
+.dialog__btn2 {
+}
+.dialog__btn1 {
+}
+.dialog-form {
+}
+.dialog-form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dialog-input {
+}
+.dialog-label {
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+}
