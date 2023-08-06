@@ -109,10 +109,6 @@ figcaption {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-ul[class],
-ol[class] {
-  list-style: none;
-}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -133,6 +129,10 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+ul[class],
+ol[class] {
+  list-style: none;
 }
 h1 {
   font-size: 25px;
@@ -4800,10 +4800,10 @@ div.object-see-other button {
     border-radius: 0;
   }
 }
-.tips {
+.dialog-search-tips.tips {
   display: none;
 }
-.tips.is-active {
+.dialog-search-tips.tips.is-active {
   display: block;
   width: 100%;
   padding: 9px 8px;
@@ -4813,20 +4813,20 @@ div.object-see-other button {
   margin-top: -1px;
   transition: background-color 0.3s linear;
 }
-.tips:hover {
+.dialog-search-tips.tips:hover {
   background-color: rgba(65, 146, 217, 0.1);
 }
-.tips__list {
+.dialog-search-tips .tips__list {
   display: flex;
   align-items: center;
   gap: 18px;
   list-style: none;
 }
-.tips__item {
+.dialog-search-tips .tips__item {
   position: relative;
   margin: 0;
 }
-.tips__item:after {
+.dialog-search-tips .tips__item:after {
   content: '';
   position: absolute;
   top: 6px;
@@ -4835,10 +4835,10 @@ div.object-see-other button {
   border-width: 4px 0 4px 8px;
   border-left-color: #d6e0e4;
 }
-.tips__item:last-child::after {
+.dialog-search-tips .tips__item:last-child::after {
   display: none;
 }
-.tips__btn {
+.dialog-search-tips .tips__btn {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -4897,10 +4897,12 @@ div.object-see-other button {
 .cost-calc__city {
   position: relative;
 }
-.cost-calc__city-tips {
+.cost-calc__city-tips.tips,
+.dialog-form__tips.tips {
   display: none;
 }
-.cost-calc__city-tips.is-active {
+.cost-calc__city-tips.tips.is-active,
+.dialog-form__tips.tips.is-active {
   position: absolute;
   display: block;
   width: 100%;
@@ -4910,16 +4912,19 @@ div.object-see-other button {
   background: #fff;
   transition: background-color 0.3s linear;
 }
-.cost-calc__tips-list {
+.cost-calc__city-tips .tips__list,
+.dialog-form__tips .tips__list {
   display: flex;
   flex-direction: column;
 }
-.cost-calc__tips-item {
+.cost-calc__city-tips .tips__item,
+.dialog-form__tips .tips__item {
   position: relative;
   margin: 0;
   transition: all 0.3s;
 }
-.cost-calc__tips-item:hover::before {
+.cost-calc__city-tips .tips__item:hover::before,
+.dialog-form__tips .tips__item:hover::before {
   content: '';
   position: absolute;
   top: 0;
@@ -4928,7 +4933,8 @@ div.object-see-other button {
   height: 26px;
   background-color: #4192d9;
 }
-.cost-calc__tips-btn {
+.cost-calc__city-tips .tips__btn,
+.dialog-form__tips .tips__btn {
   width: 100%;
   padding: 4px 9px;
   font-size: 12px;
@@ -4941,10 +4947,12 @@ div.object-see-other button {
   text-align: left;
   transition: background-color 0.3s;
 }
-.cost-calc__tips-btn:hover {
+.cost-calc__city-tips .tips__btn:hover,
+.dialog-form__tips .tips__btn:hover {
   background-color: rgba(65, 146, 217, 0.1);
 }
-.cost-calc__tips-btn span {
+.cost-calc__city-tips .tips__btn span,
+.dialog-form__tips .tips__btn span {
   color: #708699;
 }
 .cost-calc__aside {
@@ -5607,7 +5615,6 @@ main h1 {
 }
 .results-more {
   height: 50px;
-  margin-top: -16px;
   font-weight: bold;
 }
 .suggestions-carousel__item {
@@ -5728,30 +5735,96 @@ main h1 {
   margin: 20px 0;
   visibility: visible;
 }
-.dialog__inner {
-}
 .dialog__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #2d2d2d;
 }
-.dialog__box {
+.dialog__subtitle {
+  margin-bottom: 8px;
 }
-.dialog__btn {
+.dialog__subtitle span {
+  color: #4192d9;
 }
-.dialog__btn2 {
-}
-.dialog__btn1 {
-}
-.dialog-form {
-}
-.dialog-form__input {
+.dialog-form__inner {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.dialog-input {
+.dialog-form__tips.tips.is-active {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  z-index: 1;
+  margin-top: 0;
 }
-.dialog-label {
+.dialog__btn-problem {
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  background: none;
+  color: #708699;
+  border-radius: 3px;
+  border: 1px solid #d6e0e4;
+}
+.dialog__btn-problem::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-width: 5px 0 4px 8px;
+  border-left-color: #d6e0e4;
+  transform: rotate(90deg);
+}
+.dialog-form .dialog-input {
+  height: 34px;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #d6e0e4;
+  outline: none;
+}
+.dialog-form__row {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
-.btn {
+.dialog__bottom {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dialog-form__file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+.dialog__form__file-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #2d2d2d;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  border: none;
+  background-color: transparent;
+  width: 122px;
+  height: 20px;
+}
+.dialog__form__file-btn::before {
+  content: url('../images/icon-add-file.svg');
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
 }

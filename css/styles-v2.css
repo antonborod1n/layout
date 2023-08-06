@@ -130,6 +130,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+ul[class],
+ol[class] {
+  list-style: none;
+}
 h1 {
   font-size: 25px;
   line-height: 1.44;
@@ -1942,6 +1946,7 @@ input:-ms-input-placeholder {
 .footer-links h4 {
   margin-bottom: 8px;
   font-size: 11px;
+  line-height: 1.5;
 }
 .footer-links ul {
   -webkit-columns: 150px;
@@ -3285,7 +3290,47 @@ a.suggestions-carousel__item:hover {
   .results__header {
     display: none;
   }
-  .pager {
+  .pager__pages {
+    display: none;
+  }
+  .pager__total {
+    margin: 0 auto;
+  }
+}
+.breadcrumbs__bottom {
+  margin-bottom: 32px;
+  width: 100%;
+}
+.breadcrumbs__bottom-list {
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d6e0e4;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+.breadcrumbs__bottom-list:last-child {
+  border-bottom: none;
+}
+.breadcrumbs__bottom-item {
+  margin: 0;
+  white-space: nowrap;
+}
+.breadcrumbs__bottom-item:after {
+  content: url('../images/icon-breadcrumbs-arrow.svg');
+  margin: 0 8px;
+}
+.breadcrumbs__bottom-item:last-child:after {
+  display: none;
+}
+.breadcrumbs__bottom-link {
+  white-space: nowrap;
+  color: #708699;
+  font-size: 12px;
+  line-height: 18px;
+}
+@media (min-width: 768px) {
+  .breadcrumbs__bottom {
     display: none;
   }
 }

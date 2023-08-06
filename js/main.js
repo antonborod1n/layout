@@ -266,9 +266,9 @@ $(function () {
 
 window.addEventListener('DOMContentLoaded', () => {
   const citySearchTips = document.querySelector('.cost-calc__city-tips');
-  const sitySearchInput = document.querySelector('.cost-calc__input');
+  const citySearchInput = document.querySelector('.cost-calc__input');
 
-  sitySearchInput.addEventListener('click', function () {
+  citySearchInput.addEventListener('click', function () {
     citySearchTips.classList.toggle('is-active');
   });
 
@@ -294,26 +294,4 @@ window.addEventListener('DOMContentLoaded', () => {
       item.classList.add('is-active');
     });
   });
-
-  //accordion
-  function accordeon(triggersSelector) {
-    console.log(triggersSelector);
-    const btns = document.querySelectorAll(triggersSelector);
-
-    btns.forEach((item) => {
-      item.addEventListener('click', function () {
-        this.classList.toggle('is-active');
-        this.nextElementSibling.classList.toggle('is-active');
-
-        if (this.classList.contains('is-active')) {
-          this.nextElementSibling.style.maxHeight =
-            this.nextElementSibling.scrollHeight + 80 + 'px';
-        } else {
-          this.nextElementSibling.style.maxHeight = '0px';
-        }
-      });
-    });
-  }
-
-  accordeon('.question__title');
 });
