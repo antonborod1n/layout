@@ -265,13 +265,6 @@ $(function () {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  const citySearchTips = document.querySelector('.cost-calc__city-tips');
-  const citySearchInput = document.querySelector('.cost-calc__input');
-
-  citySearchInput.addEventListener('click', function () {
-    citySearchTips.classList.toggle('is-active');
-  });
-
   //кнопка
   $('.right-container-button').hover(
     function () {
@@ -284,6 +277,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //активный элемент
   const elem = document.querySelectorAll('.small-carousel__item');
+  const searchInputs = document.querySelector('.mobile-modal__search-input');
+  const searchBtn = document.querySelector('.mobile-modal__search-btn');
+  const searchTips = document.querySelector('.search-tips');
+
+  searchInputs.addEventListener('click', function () {
+    searchBtn.classList.toggle('is-active');
+    searchTips.classList.toggle('is-active');
+  });
   elem.forEach((item) => {
     item.addEventListener('click', function () {
       elem.forEach((element) => {

@@ -525,23 +525,23 @@
             <input type="text" class="mobile-modal__search-input" placeholder="Поиск" />
           </div>
           <ul class="mobile-modal__nav mobile-modal__nav-last">
-            <li><a class="mobile-modal__link" href="#">Одежда (253)</a></li>
-            <li><a class="mobile-modal__link" href="#">Аксессуары и прочее (202)</a></li>
-            <li><a class="mobile-modal__link" href="#">Обувь (60)</a></li>
-            <li><a class="mobile-modal__link" href="#">Узкопрофильная одежда (56)</a></li>
-            <li><a class="mobile-modal__link" href="#">Нижнее белье (19)</a></li>
-            <li><a class="mobile-modal__link" href="#">Кожа (9)</a></li>
-            <li><a class="mobile-modal__link" href="#">Для мам и детей (7)</a></li>
-            <li><a class="mobile-modal__link" href="#">Прочее (3)</a></li>
-            <li><a class="mobile-modal__link" href="#">Комиссионные товары (1)</a></li>
-            <li><a class="mobile-modal__link" href="#">Секонд-хенды и винтаж (1)</a></li>
-            <li><a class="mobile-modal__link" href="#">Узкопрофильная одежда (56)</a></li>
-            <li><a class="mobile-modal__link" href="#">Нижнее белье (19)</a></li>
-            <li><a class="mobile-modal__link" href="#">Кожа (9)</a></li>
-            <li><a class="mobile-modal__link" href="#">Для мам и детей (7)</a></li>
-            <li><a class="mobile-modal__link" href="#">Прочее (3)</a></li>
-            <li><a class="mobile-modal__link" href="#">Комиссионные товары (1)</a></li>
-            <li><a class="mobile-modal__link" href="#">Секонд-хенды и винтаж (1)</a></li>
+            <li><a href="#">Одежда (253)</a></li>
+            <li><a class="is-active" href="#">Аксессуары и прочее (202)</a></li>
+            <li><a href="#">Обувь (60)</a></li>
+            <li><a href="#">Узкопрофильная одежда (56)</a></li>
+            <li><a href="#">Нижнее белье (19)</a></li>
+            <li><a href="#">Кожа (9)</a></li>
+            <li><a href="#">Для мам и детей (7)</a></li>
+            <li><a href="#">Прочее (3)</a></li>
+            <li><a href="#">Комиссионные товары (1)</a></li>
+            <li><a href="#">Секонд-хенды и винтаж (1)</a></li>
+            <li><a href="#">Узкопрофильная одежда (56)</a></li>
+            <li><a href="#">Нижнее белье (19)</a></li>
+            <li><a href="#">Кожа (9)</a></li>
+            <li><a href="#">Для мам и детей (7)</a></li>
+            <li><a href="#">Прочее (3)</a></li>
+            <li><a href="#">Комиссионные товары (1)</a></li>
+            <li><a href="#">Секонд-хенды и винтаж (1)</a></li>
           </ul>
         </div>
         <div class="mobile-modal__foot">
@@ -1538,7 +1538,7 @@
         <div class="dialog-login__field dialog-login__field-required dialog-login__field-tel">
           <label>Телефон</label>
           <div class="dialog-login__input">
-            <input type="tel" value="+7"/>
+            <input type="tel" value="+7" />
           </div>
         </div>
         <div class="dialog-login__field dialog-login__field-required">
@@ -1886,6 +1886,13 @@
             overlayClose: false,
           });
         });
+      });
+
+      const citySearchTips = document.querySelector('.cost-calc__city-tips');
+      const citySearchInput = document.querySelector('.cost-calc__input');
+
+      citySearchInput.addEventListener('click', function () {
+        citySearchTips.classList.toggle('is-active');
       });
     </script>
   </body>
