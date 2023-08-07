@@ -2183,17 +2183,209 @@
       </div>
     </div>
 
+    <div id="dialog-comp" style="display: none">
+      <div class="dialog__inner">
+        <h2 class="dialog__title">Пожаловаться</h2>
+        <div class="dialog__box">
+          <button class="dialog__btn dialog__btn2">Часто задаваемые вопросы</button>
+          <button class="dialog__btn dialog__btn1">Задать свой вопрос</button>
+        </div>
+        <form class="dialog-form" action="#" method="post" enctype="multipart/form-data">
+          <div class="dialog-form__inner">
+            <div class="dialog-form__row">
+              <span class="dialog__subtitle">Что произошло?</span>
+              <button class="dialog__btn-problem" type="button">Техническая проблема</button>
+              <div class="dialog-form__tips tips">
+                <ul class="tips__list">
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="teh">
+                      Техническая проблема
+                    </button>
+                  </li>
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="comp">Жалоба</button>
+                  </li>
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="upgr">Улучшение сервиса</button>
+                  </li>
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="coll">Сотрудничество</button>
+                  </li>
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="other">Прочее</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dialog-form__row">
+              <span class="dialog__subtitle">Чем мы можем вам помочь? <span>*</span></span>
+              <input
+                class="dialog-input"
+                id="userHelp"
+                type="text"
+                placeholder="Введите текст"
+                name="user-text"
+                required
+              />
+            </div>
+            <div class="dialog-form__row">
+              <span class="dialog__subtitle">Ваша почта:</span>
+              <input
+                class="dialog-input"
+                id="userEmail"
+                type="email"
+                placeholder="ivan@mail.ru"
+                name="user-email"
+              />
+            </div>
+            <div class="dialog__bottom">
+              <div class="dialog-form__row">
+                <input class="dialog-form__file" type="file" name="user-file" />
+                <button class="dialog__form__file-btn" type="button">Выберите файл</button>
+              </div>
+              <button class="dialog-btn__submit btn2">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="dialog-help" style="display: none">
+      <div class="dialog__inner">
+        <h2 class="dialog__title">Помощь</h2>
+        <div class="dialog__box">
+          <button class="dialog__btn dialog__btn1">Часто задаваемые вопросы</button>
+          <button class="dialog__btn dialog__btn2">Задать свой вопрос</button>
+        </div>
+        <div class="faq u-desktop-only">
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Пoчeмy y вac бoльшe вcex oбъявлeний oт coбcтвeнникoв в Poccии?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Kaк бecплaтнo пoдaть cвoe пpeдлoжeниe o пpoдaжe?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Зa cчeт чeгo вы пpoдaeтe бизнecы быcтpee вcex в Poccии?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Oкaзывaeтe ли вы ycлyги бpoкepoв, юpиcтoв и ayдитopoв?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Пoчeмy y вac бoльшe вcex oбъявлeний oт coбcтвeнникoв в Poccии?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Kaк бecплaтнo пoдaть cвoe пpeдлoжeниe o пpoдaжe?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Зa cчeт чeгo вы пpoдaeтe бизнecы быcтpee вcex в Poccии?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Oкaзывaeтe ли вы ycлyги бpoкepoв, юpиcтoв и ayдитopoв?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="dialog__text">
+          He нaшли oтвeт cpeди cтaндapтныx вoпpocoв?
+          <a class="dialog__link" href="#">Пoпpoбyйтe зaдaть cвoй</a>
+        </p>
+      </div>
+    </div>
+
     <div class="dev-block">
       <ul class="dev-block__pages">
         <li><a href="index-2.html">index.html - А</a></li>
         <li><a href="index-v2.html">index.html - Б</a></li>
         <li><a href="index-v3.html">index.html - В</a></li>
         <li><a href="calculator.html">Калькулятор</a></li>
+        <li><a href="filter.html">Фильтр</a></li>
         <li><a href="object.html">object.html</a></li>
       </ul>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-1">Д1</button>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-2">Д2</button>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-3">Д3</button>
+      <button type="button" class="dev-block__dialog-btn" data-id="dialog-help">help</button>
+      <button type="button" class="dev-block__dialog-btn" data-id="dialog-comp">comp</button>
       <label class="dev-block__switch">
         <input type="checkbox" id="dev-fixed-width" />
         <div class="dev-block__switch-els">
