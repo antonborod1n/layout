@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Asset Calc</title>
-    <link href="css/calculator.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <title>Business Asset Filter</title>
+    <link href="css/filter.css" rel="stylesheet" type="text/css" media="screen, projection" />
     <link href="css/styles-v3.css" rel="stylesheet" type="text/css" media="screen, projection" />
   </head>
   <body>
@@ -832,214 +832,217 @@
       </div>
 
       <main class="main">
-        <section class="cost-calc">
+        <section class="filter filter-page">
           <div class="container">
-            <div class="cost-calc__inner">
-              <div class="breadcrumbs-main">
-                <ol class="breadcrumbs-main__list">
-                  <li class="breadcrumbs-main__item">
-                    <a class="breadcrumbs-main__link" href="#">Главная</a>
-                  </li>
-                  <li class="breadcrumbs-main__item">
-                    <span class="breadcrumbs-main__link breadcrumbs-main__link-last"
-                      >Kaлькyлятop cтoимocти бизнeca</span
-                    >
-                  </li>
-                </ol>
-              </div>
-
-              <h2 class="cost-calc__title">Kaлькyлятop cтoимocти бизнeca</h2>
-              <div class="cost-calc__layout">
-                <aside class="cost-calc__aside">
-                  <div class="cost-calc__aside-desc">
-                    Текущая точность результата:<span>25%</span>
-                  </div>
-                  <p class="cost-calc__aside-text">
-                    Чем больше информации представлено, тем больше точность экспресс-оценки
-                  </p>
+            <div class="filter__inner">
+              <h2 class="filter__title">Все фильтры</h2>
+              <div class="filter__layout">
+                <aside class="filter__aside">
+                  <button class="filter__btn-seacrh"></button>
+                  <input
+                    class="filter__input-search"
+                    type="text"
+                    placeholder="Введите ключевое слово"
+                  />
+                  <ul class="filter__aside-list">
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Общее</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Характеристики бизнеса</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Финансовая информация</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Характеристики помещений (строений)</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Характеристики арендного бизнеса</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#"
+                        >Характеристики нематериальных активов</a
+                      >
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Персонал</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Характеристики парковки</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Обучение и поддержка</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Характеристики земли</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Характеристики прочих активов</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Корпоративные вопросы</a>
+                    </li>
+                    <li class="filter__aside-item">
+                      <a class="filter__aside-link" href="#">Условия сделки</a>
+                    </li>
+                  </ul>
                 </aside>
-                <div class="cost-calc__main">
-                  <div class="cost-calc__content">
-                    <div class="cost-calc__block">
-                      <div class="cost-calc__city">
-                        <h2 class="cost-calc__subtitle">Город</h2>
-                        <input type="text" placeholder="Введите текст" class="cost-calc__input" />
-                        <div class="cost-calc__city-tips tips">
-                          <ul class="tips__list">
-                            <li class="tips__item">
-                              <button class="tips__btn">
-                                Санкт-Петербург, <span>Россия</span>
-                              </button>
-                            </li>
-                            <li class="tips__item">
-                              <button class="tips__btn">Самара, <span>Россия</span></button>
-                            </li>
-                            <li class="tips__item">
-                              <button class="tips__btn">Самарканд, <span>Узбекистан</span></button>
-                            </li>
-                            <li class="tips__item">
-                              <button class="tips__btn">Саратов, <span>Россия</span></button>
-                            </li>
-                            <li class="tips__item">
-                              <button class="tips__btn">Саранск, <span>Россия</span></button>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cost-calc__block cost-calc__category">
-                      <h2 class="cost-calc__subtitle">Категория бизнеса</h2>
-                      <div class="dialog-cols">
-                        <div class="dialog-cols__col">
-                          <div class="dialog-cols__head">Сектор</div>
-                          <div class="dialog-cols__body">
-                            <ul>
-                              <li><button type="button">Все бизнесы</button></li>
-                              <li><button type="button">Агро</button></li>
-                              <li><button type="button">Торговля</button></li>
-                              <li><button type="button">Арендный бизес</button></li>
-                              <li><button type="button">Питание</button></li>
-                              <li><button type="button">Интернет</button></li>
-                              <li><button type="button">Добыча</button></li>
-                              <li><button type="button">Производство</button></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="dialog-cols__col">
-                          <div class="dialog-cols__head">Подсектор</div>
-                          <div class="dialog-cols__body">
-                            <ul>
-                              <li><button type="button">Все бизнесы</button></li>
-                              <li><button type="button">Фермы и колхозы</button></li>
-                              <li><button type="button">Выращивание</button></li>
-                              <li><button type="button">Первичная обработка</button></li>
-                              <li><button type="button">Глубокая переработка</button></li>
-                              <li><button type="button">Управление фермами</button></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="dialog-cols__col">
-                          <div class="dialog-cols__head">Категория</div>
-                          <div class="dialog-cols__body">
-                            <ul>
-                              <li><button type="button">Все бизнесы</button></li>
-                              <li><button type="button">Растениеводство</button></li>
-                              <li><button type="button">Цветы и сад</button></li>
-                              <li><button type="button">Птицеводство</button></li>
-                              <li><button type="button">Животноводство</button></li>
-                              <li><button type="button">Рыбоводство</button></li>
-                              <li><button type="button">Звероводство</button></li>
-                              <li><button type="button">Прочее</button></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="dialog-cols__col">
-                          <div class="dialog-cols__head">Подкатегория</div>
-                          <div class="dialog-cols__body">
-                            <ul>
-                              <li><button type="button">Все бизнесы</button></li>
-                              <li><button type="button">Куры, утки и гуси</button></li>
-                              <li><button type="button">Перепела</button></li>
-                              <li><button type="button">Страусы</button></li>
-                              <li><button type="button">Фазаны</button></li>
-                              <li><button type="button">Пух и перья</button></li>
-                              <li><button type="button">Птицефермы</button></li>
-                              <li><button type="button">Птицефабрики</button></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cost-calc__choice">
-                        <h2 class="cost-calc__subtitle">Вы выбрали</h2>
-                        <ul class="cost-calc__choice-list">
-                          <li class="cost-calc__choice-item">Агро</li>
-                          <li class="cost-calc__choice-item">Выращивание</li>
-                          <li class="cost-calc__choice-item">Птицеводство</li>
-                        </ul>
-                      </div>
-                      <button class="cost-calc__category-btn btn2" data-open-modal="modal-calc">
-                        Выбрать категорию
-                      </button>
-                    </div>
-                    <div class="cost-calc__block cost-calc__revenue">
-                      <h2 class="cost-calc__subtitle">Выручка</h2>
-                      <div class="cost-calc__container">
-                        <div class="cost-calc__block-box">
-                          <input class="cost-calc__input-price" type="text" placeholder="1000" />
-                          <div class="cost-calc__select-box">
-                            <select class="cost-calc__select" name="calc-carrancy">
+                <form class="filter__form" action="#" method="post">
+                  <div class="filter__block">
+                    <h2 class="filter__subtitle">Цена</h2>
+                    <div class="filter__container-top">
+                      <div class="filter__container-top-box">
+                        <span class="filter__container-item">от</span>
+                        <div class="filter__container-price">
+                          <input class="filter__input-price" type="text" placeholder="1000" />
+                          <div class="filter__select-box">
+                            <select class="filter__select" name="filter-carrancy">
                               <option value="rub">pyб. (RUB)</option>
                               <option value="usd">usd (USD)</option>
                               <option value="eur">eur (EUR)</option>
                             </select>
                           </div>
                         </div>
-                        <div class="cost-calc__block-box">
-                          <div class="cost-calc__select-box cost-calc__select-box-time">
-                            <select
-                              class="cost-calc__select cost-calc__select-time"
-                              name="calc-carrancy"
-                            >
-                              <option value="month">В месяц</option>
-                              <option value="year">В год</option>
-                              <option value="five-years">В пять лет</option>
-                            </select>
-                          </div>
-                        </div>
                       </div>
-                    </div>
-                    <div class="cost-calc__block cost-calc__cash">
-                      <h2 class="cost-calc__subtitle">Kaccoвaя пpибыль / Cash Flow</h2>
-                      <div class="cost-calc__container">
-                        <div class="cost-calc__block-box">
-                          <input class="cost-calc__input-price" type="text" placeholder="1000" />
-                          <div class="cost-calc__select-box">
-                            <select class="cost-calc__select" name="calc-carrancy" id="carrancy">
+                      <div class="filter__container-top-box">
+                        <span class="filter__container-item">от</span>
+                        <div class="filter__container-price">
+                          <input class="filter__input-price" type="text" placeholder="1000" />
+                          <div class="filter__select-box">
+                            <select class="filter__select" name="filter-carrancy">
                               <option value="rub">pyб. (RUB)</option>
                               <option value="usd">usd (USD)</option>
                               <option value="eur">eur (EUR)</option>
                             </select>
                           </div>
                         </div>
-                        <div class="cost-calc__block-box">
-                          <div class="cost-calc__select-box cost-calc__select-box-time">
-                            <select
-                              class="cost-calc__select cost-calc__select-time"
-                              name="calc-carrancy"
-                            >
-                              <option value="month">В месяц</option>
-                              <option value="year">В год</option>
-                              <option value="five-years">В пять лет</option>
-                            </select>
-                          </div>
-                        </div>
                       </div>
-                    </div>
-                    <div class="cost-calc__block cost-calc__debts">
-                      <h2 class="cost-calc__subtitle">Дoлги пepeд тpeтьими лицaми:</h2>
-                      <div class="cost-calc__container">
-                        <div class="cost-calc__block-box">
-                          <input class="cost-calc__input-price" type="text" placeholder="1000" />
-                          <div class="cost-calc__select-box">
-                            <select class="cost-calc__select" name="calc-carrancy">
-                              <option value="rub">pyб. (RUB)</option>
-                              <option value="usd">usd (USD)</option>
-                              <option value="eur">eur (EUR)</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <p class="cost-calc__text">
-                          Cyммa любыx дeнeжныx oбязaтeльcтв пepeд тpeтьими лицaми
-                        </p>
-                      </div>
-                    </div>
-                    <div class="cost-calc__btns">
-                      <button class="cost-calc__btn btn2">Оценить бизнес</button>
-                      <button class="cost-calc__btn btn1">Очистить условия оценки</button>
                     </div>
                   </div>
-                </div>
+                  <div class="filter__block">
+                    <h2 class="filter__subtitle">Торг</h2>
+                    <div class="filter__container">
+                      <label class="filter__label field-radio" for="withBargaining">
+                        <input type="radio" name="auction" id="withBargaining" checked="" />
+                        <span class="field-radio__label">Возможен (<span>9174</span>)</span>
+                      </label>
+
+                      <label class="filter__label field-radio" for="withoutBargaining">
+                        <input type="radio" name="auction" id="withoutBargaining" checked="" />
+                        <span class="field-radio__label">Без торга (<span>1058</span>)</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filter__block">
+                    <h2 class="filter__subtitle">Характеристики местоположения</h2>
+                    <div class="dialog-cols__col">
+                      <div class="filter__container dialog-cols__body">
+                        <div class="filter__container-box">
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">За городом</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">В сельской местности</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">В горах</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">В (рядом) лесу</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">У воды</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">За городом</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">В сельской местности</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">В горах</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">В (рядом) лесу</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">У воды</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">За городом</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">В сельской местности</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">В горах</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">В (рядом) лесу</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">У воды</span>
+                          </label>
+                        </div>
+                        <div class="filter__container-box">
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" checked="" />
+                            <span class="field-chk__label">У реки</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">У озера (пруда)</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">На пляже</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">На острове</span>
+                          </label>
+                          <label class="field-chk">
+                            <input class="filter__radio" type="checkbox" />
+                            <span class="field-chk__label">У моря (океана)</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dialog-selected-filters">
+                    <h3>Вы выбрали</h3>
+                    <div class="dialog-selected-filters__item">
+                      <div class="dialog-selected-filters__item-name">Торг &gt; Возможен</div>
+                      <button type="button" class="dialog-selected-filters__remove"></button>
+                    </div>
+                    <div class="dialog-selected-filters__item">
+                      <div class="dialog-selected-filters__item-name">
+                        Характеристики местоположения &gt; У реки
+                      </div>
+                      <button type="button" class="dialog-selected-filters__remove"></button>
+                    </div>
+                  </div>
+                  <div class="filter__btns">
+                    <button class="filter__btn btn2">Показать 146 предложений</button>
+                    <button class="filter__btn btn1" type="reset">Очистить</button>
+                  </div>
+                </form>
               </div>
             </div>
 
@@ -1768,7 +1771,6 @@
         <li><a href="index-v2.html">index.html - Б</a></li>
         <li><a href="index-v3.html">index.html - В</a></li>
         <li><a href="calculator.html">Калькулятор</a></li>
-        <li><a href="filter.html">Фильтр</a></li>
         <li><a href="object.html">object.html</a></li>
       </ul>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-1">Д1</button>
