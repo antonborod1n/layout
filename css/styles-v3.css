@@ -3548,21 +3548,37 @@ a.suggestions-carousel__item:hover {
   }
 }
 .faq {
+  max-height: 500px;
   margin-bottom: 44px;
-  border: 1px solid #d6e0e4;
   border-radius: 3px 3px 0 0;
   background: #fff;
+  overflow: auto;
 }
-.faq-header {
+.faq::-webkit-scrollbar {
+  width: 14px;
+}
+.faq::-webkit-scrollbar-thumb {
+  border: 4px solid #fff;
+  border-radius: 14px;
+  background: #708699;
+}
+.faq-modal .faq-header {
   padding: 12px 15px;
 }
-.faq-item {
-  border-top: 1px solid #d6e0e4;
+.faq-modal .faq-item {
+  border: 1px solid #d6e0e4;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  background: #fff;
 }
-.faq-item__head {
+.faq-modal .faq-item__head {
   position: relative;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
   width: 100%;
-  padding: 17px 15px;
+  padding: 8px 16px;
   padding-right: 50px;
   background: none;
   border: 0;
@@ -3570,33 +3586,35 @@ a.suggestions-carousel__item:hover {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-.faq-item__head:hover {
+.faq-modal .faq-item__head:hover {
   background: #f9f9f9;
 }
-.faq-item__head::after {
-  content: '';
+.faq-modal .faq-item__head::after {
+  content: url('../images/icon-arrow-bottom.svg');
   position: absolute;
-  top: 7px;
-  right: 6px;
-  width: 36px;
-  height: 36px;
-  background: url(../images/icon-chevron-sprite.svg#gray) 50% no-repeat;
-  background-size: 24px;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  top: 8px;
+  right: 16px;
+  background: none;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
-  opacity: 0.3;
 }
-.faq-item__head.is-expanded::after {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+.faq-modal .faq-item__head.is-active::after {
+  transform: rotate(180deg);
 }
-.faq-item__body {
+.faq-modal .faq-item__body {
   display: none;
-  padding: 15px;
+}
+.faq-modal .faq-item__body.is-active {
+  display: block;
+  padding: 0 15px 15px;
+}
+.faq-modal .faq-item__body p {
+  color: #2d2d2d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
 }
 .breadcrumbs {
   margin-bottom: 10px;

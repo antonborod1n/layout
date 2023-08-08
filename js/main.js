@@ -277,14 +277,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //активный элемент
   const elem = document.querySelectorAll('.small-carousel__item');
-  const searchInputs = document.querySelector('.mobile-modal__search-input');
-  const searchBtn = document.querySelector('.mobile-modal__search-btn');
-  const searchTips = document.querySelector('.search-tips');
+  const searchInputs = document.querySelectorAll('.mobile-modal__search-input');
+  const searchBtns = document.querySelectorAll('.mobile-modal__search-btn');
+  const searchTips = document.querySelectorAll('.search-tips');
 
-  searchInputs.addEventListener('click', function () {
-    searchBtn.classList.toggle('is-active');
-    searchTips.classList.toggle('is-active');
+  searchInputs.forEach((item) => {
+    item.addEventListener('click', function () {
+      searchTips.forEach((element) => {
+        element.classList.toggle('is-active');
+      });
+      searchBtns.forEach((item) => {
+        item.classList.toggle('is-active');
+      });
+    });
   });
+
   elem.forEach((item) => {
     item.addEventListener('click', function () {
       elem.forEach((element) => {

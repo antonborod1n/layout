@@ -2395,6 +2395,7 @@ input.mobile-modal__search-input {
   color: #000;
 }
 .mobile-modal__search-btn.btn2 {
+  position: absolute;
   transform: translateX(500%);
   visibility: hidden;
   pointer-events: none;
@@ -2405,6 +2406,7 @@ input.mobile-modal__search-input {
   transition: transform 0.3s, visibility 0.3s, height 0s, width 0s;
 }
 .mobile-modal__search-btn.btn2.is-active {
+  position: static;
   transform: translateY(0);
   visibility: visible;
   pointer-events: none;
@@ -3665,7 +3667,6 @@ a.suggestions-carousel__item:hover {
 }
 .faq {
   margin-bottom: 44px;
-  border: 1px solid #d6e0e4;
   border-radius: 3px 3px 0 0;
   background: #fff;
 }
@@ -3673,7 +3674,8 @@ a.suggestions-carousel__item:hover {
   padding: 12px 15px;
 }
 .faq-item {
-  border-top: 1px solid #d6e0e4;
+  border: 1px solid #d6e0e4;
+  margin-bottom: 8px;
 }
 .faq-item__head {
   position: relative;
