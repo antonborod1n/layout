@@ -94,23 +94,25 @@
               </div>
               <div class="header-settings">
                 <div class="header-dpd header-dpd--currency">
-                  <button type="button" class="header-dpd__value">Рyб. (RUB)</button>
+                  <button type="button" class="header-dpd__value header-dpd__main-btn">
+                    Рyб. (RUB)
+                  </button>
                   <div class="header-dpd__body">
                     <input type="text" placeholder="Поиск" class="header-dpd__search" />
                     <div class="header-dpd__options">
-                      <div value="EUR">€ (EUR)</div>
-                      <div value="USD">$ (USD)</div>
-                      <div value="GBP">£ (GBP)</div>
-                      <div value="CHF">₣ (CHF)</div>
-                      <div value="RUB">руб. (RUB)</div>
-                      <div value="AMD">AMD</div>
-                      <div value="AUD">$ (AUD)</div>
-                      <div value="AZN">AZN</div>
-                      <div value="BGN">лв. (BGN)</div>
-                      <div value="BRL">$ (BRL)</div>
-                      <div value="BYN">р. (BYN)</div>
-                      <div value="CAD">$ (CAD)</div>
-                      <div value="CNY">¥ (CNY)</div>
+                      <button class="header-dpd__btn" type="button" value="EUR">€ (EUR)</button>
+                      <button class="header-dpd__btn" type="button" value="USD">$ (USD)</button>
+                      <button class="header-dpd__btn" type="button" value="GBP">£ (GBP)</button>
+                      <button class="header-dpd__btn" type="button" value="CHF">₣ (CHF)</button>
+                      <button class="header-dpd__btn" type="button" value="RUB">руб. (RUB)</button>
+                      <button class="header-dpd__btn" type="button" value="AMD">AMD</button>
+                      <button class="header-dpd__btn" type="button" value="AUD">$ (AUD)</button>
+                      <button class="header-dpd__btn" type="button" value="AZN">AZN</button>
+                      <button class="header-dpd__btn" type="button" value="BGN">лв. (BGN)</button>
+                      <button class="header-dpd__btn" type="button" value="BRL">$ (BRL)</button>
+                      <button class="header-dpd__btn" type="button" value="BYN">р. (BYN)</button>
+                      <button class="header-dpd__btn" type="button" value="CAD">$ (CAD)</button>
+                      <button class="header-dpd__btn" type="button" value="CNY">¥ (CNY)</button>
                     </div>
                   </div>
                 </div>
@@ -338,7 +340,7 @@
           </ul>
         </div>
         <div class="mobile-modal__foot">
-          <button type="button" class="btn-primary">Выбрать</button>
+          <button type="button" class="btn-primary" data-close-modal>Выбрать</button>
         </div>
       </div>
 
@@ -1714,15 +1716,6 @@
           </div>
 
           <button type="button" class="side-add-btn"></button>
-
-          <!--  <div class="right-container">
-            <button class="right-container-button">
-              <span class="short-text">
-                <i class="material-icons" id="icon-chat"></i>
-              </span>
-              <span class="long-text">ПОДАТЬ ПРЕДЛОЖЕНИЕ</span>
-            </button>
-          </div> -->
         </div>
       </main>
 

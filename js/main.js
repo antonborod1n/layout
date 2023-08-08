@@ -265,15 +265,33 @@ $(function () {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+  //currancy
+  const currencyMainBtn = document.querySelector('.header-dpd__main-btn');
+  const currencyMainBtnM = document.querySelector('.header-mobile__settings button');
+  const currencyBtns = document.querySelectorAll('.header-dpd__btn');
+  const currencyBtnsM = document.querySelectorAll('.field-radio__label');
+  const currencyMainBtnValue = currencyMainBtnM.querySelector('strong');
+
+  currencyMainBtnM.addEventListener('click', changeValueMobile);
+  currencyMainBtn.addEventListener('click', changeValueDesctop);
+
+  function changeValueMobile() {
+    currencyBtnsM.forEach((item) => {
+      item.addEventListener('click', function () {
+        currencyMainBtnValue.textContent = item.innerHTML;
+      });
+    });
+  }
+
+  function changeValueDesctop() {
+    currencyBtns.forEach((item) => {
+      item.addEventListener('click', function () {
+        currencyMainBtn.textContent = item.innerHTML;
+      });
+    });
+  }
+
   //кнопка
-  $('.right-container-button').hover(
-    function () {
-      $('.long-text').addClass('show-long-text');
-    },
-    function () {
-      $('.long-text').removeClass('show-long-text');
-    },
-  );
 
   //активный элемент
   const elem = document.querySelectorAll('.small-carousel__item');
