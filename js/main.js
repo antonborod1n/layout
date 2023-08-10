@@ -252,6 +252,13 @@ $(function () {
           overlayClose: !1,
         });
       })
+      .on('click', '.js-open-modal', function () {
+        ADialog({
+          html: document.getElementById('dialog-help').innerHTML,
+          className: 'dialog-modal',
+          overlayClose: !1,
+        });
+      })
       .on('click', '.js-open-register', function () {
         ADialog({
           html: document.getElementById('dialog-register').innerHTML,
@@ -292,6 +299,27 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   //кнопка
+
+  const widget = document.querySelector('.side-add-btn');
+  const desc = document.querySelector('.side-add-btn__desc');
+  const maxWidth = desc.scrollWidth + 'px';
+  desc.style.maxWidth = 0;
+
+  widget.addEventListener('click', function () {
+    console.log('yes');
+  });
+
+  widget.addEventListener('mouseover', open);
+  widget.addEventListener('mouseout', close);
+
+  function open() {
+    desc.style.maxWidth = maxWidth;
+    desc.classList.add('open');
+  }
+  function close() {
+    desc.style.maxWidth = 0;
+    desc.classList.remove('open');
+  }
 
   //активный элемент
   const elem = document.querySelectorAll('.small-carousel__item');

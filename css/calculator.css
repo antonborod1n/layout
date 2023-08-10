@@ -161,31 +161,11 @@
   border-radius: 0px;
   background: transparent;
   font: 12px/1.5 Arial, sans-serif;
-  color: #708699;
+  color: #000000;
   outline: none;
   width: 100%;
 }
-.cost-calc__select {
-  position: relative;
-  background-image: url(../images/icon-arrow-select.svg);
-  background-repeat: no-repeat;
-  background-position: 95% 40%;
-  display: block;
-  padding: 0 8px;
-  width: 90px;
-  outline: none;
-  border: none;
-  appearance: none;
-  cursor: pointer;
-  border-left: 1px solid #d6e0e4;
-}
-.cost-calc__select.cost-calc__select-time {
-  background-position: 99% 40%;
-}
-.cost-calc__select-box-time,
-.cost-calc__select-time {
-  width: 100%;
-}
+
 .cost-calc__choice-list {
   display: flex;
   align-items: center;
@@ -256,4 +236,112 @@
   .cost-calc__btn.btn2 {
     width: 100%;
   }
+}
+.cost-calc .cost-calc__select-box-time {
+  width: 100%;
+}
+.cost-calc .cost-calc__select-box-time .header-dpd__value {
+  position: relative;
+  background: none;
+  padding: 6px;
+  width: 100%;
+  color: #708699;
+  text-align: left;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.cost-calc .cost-calc__select-box-time .header-dpd__value::before {
+  display: none;
+}
+.cost-calc .header-dpd {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  font-size: 12px;
+}
+.cost-calc .header-dpd--opened .header-dpd__body {
+  display: block;
+}
+.cost-calc .header-dpd__value {
+  position: relative;
+  background: none;
+  padding: 6px 0 6px 8px;
+  width: 100px;
+  color: #708699;
+  text-align: left;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.cost-calc .header-dpd__value::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 6px;
+  width: 11px;
+  height: 10px;
+  background-image: url(../images/icon-arrow-select.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 40%;
+  background-size: cover;
+}
+.cost-calc .header-dpd__value::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 1px;
+  height: 16px;
+  background-color: #d6e0e4;
+}
+.cost-calc .header-dpd__body {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid silver;
+}
+.cost-calc .header-dpd--currency .header-dpd__body {
+  min-width: 100px;
+}
+.cost-calc .header-dpd--lang .header-dpd__body {
+  min-width: 140px;
+}
+.cost-calc .header-dpd__body .header-dpd__search {
+  display: block;
+  width: 100%;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid silver;
+}
+.cost-calc .header-dpd__btn {
+  border: none;
+  text-align: left;
+  background-color: transparent;
+  padding: 4px 6px;
+  width: 100%;
+  cursor: pointer;
+}
+.cost-calc .header-dpd__options {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  max-height: 250px;
+  overflow: auto;
+}
+.cost-calc .header-dpd__options .header-dpd__btn:hover {
+  background: #f5f7f9;
+}
+.cost-calc .header-dpd__options .header-dpd__btn.is-hidden {
+  display: none;
 }
