@@ -218,9 +218,23 @@
         <button class="header-mobile__burger" type="button"></button>
 
         <div class="header-mobile__nav-panel">
-          <button type="button" class="header-mobile__enter js-open-login">
-            Войти в личный кабинет
-          </button>
+          <button type="button" class="header-mobile__enter js-open-login">Войти</button>
+          <ul class="header-mobile__nav">
+            <li>
+              <a class="header-mobile__nav-link header-mobile__nav-fav" href="#">Мое избранное</a>
+            </li>
+            <li>
+              <a class="header-mobile__nav-link header-mobile__nav-chart" href="#">Мое сравнение</a>
+            </li>
+            <li>
+              <a class="header-mobile__nav-link header-mobile__nav-list" href="#"
+                >Мои предложения</a
+              >
+            </li>
+            <li>
+              <a class="header-mobile__nav-link header-mobile__nav-msg" href="#">Мои сообщения</a>
+            </li>
+          </ul>
           <ul class="header-mobile__nav">
             <li><a href="#">Действующие бизнесы</a></li>
             <li class="is-current"><a href="#">Франшизы</a></li>
@@ -896,12 +910,54 @@
                         <span class="filter__container-item">от</span>
                         <div class="filter__container-price">
                           <input class="filter__input-price" type="text" placeholder="1000" />
-                          <div class="filter__select-box">
-                            <select class="filter__select" name="filter-carrancy">
-                              <option value="rub">pyб. (RUB)</option>
-                              <option value="usd">usd (USD)</option>
-                              <option value="eur">eur (EUR)</option>
-                            </select>
+                          <div class="header-dpd header-dpd--currency">
+                            <button type="button" class="header-dpd__value header-dpd__main-btn">
+                              pyб. (RUB)
+                            </button>
+                            <div class="header-dpd__body">
+                              <input type="text" placeholder="Поиск" class="header-dpd__search" />
+                              <div class="header-dpd__options">
+                                <button class="header-dpd__btn" type="button" value="EUR">
+                                  € (EUR)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="USD">
+                                  $ (USD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="GBP">
+                                  £ (GBP)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CHF">
+                                  ₣ (CHF)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="RUB">
+                                  руб. (RUB)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AMD">
+                                  AMD
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AUD">
+                                  $ (AUD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AZN">
+                                  AZN
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BGN">
+                                  лв. (BGN)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BRL">
+                                  $ (BRL)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BYN">
+                                  р. (BYN)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CAD">
+                                  $ (CAD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CNY">
+                                  ¥ (CNY)
+                                </button>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -909,12 +965,54 @@
                         <span class="filter__container-item">от</span>
                         <div class="filter__container-price">
                           <input class="filter__input-price" type="text" placeholder="1000" />
-                          <div class="filter__select-box">
-                            <select class="filter__select" name="filter-carrancy">
-                              <option value="rub">pyб. (RUB)</option>
-                              <option value="usd">usd (USD)</option>
-                              <option value="eur">eur (EUR)</option>
-                            </select>
+                          <div class="header-dpd header-dpd--currency">
+                            <button type="button" class="header-dpd__value header-dpd__main-btn">
+                              pyб. (RUB)
+                            </button>
+                            <div class="header-dpd__body">
+                              <input type="text" placeholder="Поиск" class="header-dpd__search" />
+                              <div class="header-dpd__options">
+                                <button class="header-dpd__btn" type="button" value="EUR">
+                                  € (EUR)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="USD">
+                                  $ (USD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="GBP">
+                                  £ (GBP)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CHF">
+                                  ₣ (CHF)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="RUB">
+                                  руб. (RUB)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AMD">
+                                  AMD
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AUD">
+                                  $ (AUD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AZN">
+                                  AZN
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BGN">
+                                  лв. (BGN)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BRL">
+                                  $ (BRL)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BYN">
+                                  р. (BYN)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CAD">
+                                  $ (CAD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CNY">
+                                  ¥ (CNY)
+                                </button>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>

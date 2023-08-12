@@ -217,9 +217,23 @@
         <button class="header-mobile__burger" type="button"></button>
 
         <div class="header-mobile__nav-panel">
-          <button type="button" class="header-mobile__enter js-open-login">
-            Войти в личный кабинет
-          </button>
+          <button type="button" class="header-mobile__enter js-open-login">Войти</button>
+          <ul class="header-mobile__nav">
+            <li>
+              <a class="header-mobile__nav-link header-mobile__nav-fav" href="#">Мое избранное</a>
+            </li>
+            <li>
+              <a class="header-mobile__nav-link header-mobile__nav-chart" href="#">Мое сравнение</a>
+            </li>
+            <li>
+              <a class="header-mobile__nav-link header-mobile__nav-list" href="#"
+                >Мои предложения</a
+              >
+            </li>
+            <li>
+              <a class="header-mobile__nav-link header-mobile__nav-msg" href="#">Мои сообщения</a>
+            </li>
+          </ul>
           <ul class="header-mobile__nav">
             <li><a href="#">Действующие бизнесы</a></li>
             <li class="is-current"><a href="#">Франшизы</a></li>
@@ -496,8 +510,40 @@
           <button class="mobile-modal__back" type="button" data-close-modal=""></button>
         </div>
         <div class="mobile-modal__body">
-          <div class="mobile-modal__search">
-            <input type="text" class="mobile-modal__search-input" placeholder="Поиск" />
+          <div class="mobile-modal__body-box">
+            <div class="mobile-modal__search">
+              <input type="text" class="mobile-modal__search-input" placeholder="Поиск" />
+            </div>
+            <button class="mobile-modal__search-btn btn2" type="button">Найти</button>
+          </div>
+          <div class="search-tips">
+            <div class="search-tips__box">
+              <div class="search-tips-subtitle">Категории:</div>
+              <ol class="search-tips__list">
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#"> Франшизы </a>
+                </li>
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#"> Все бизнесы (<span>2312</span>) </a>
+                </li>
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#"> Торговля (<span>1052</span>)</a>
+                </li>
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#">
+                    Одежда, обувь и аксессуары (<span>440</span>)</a
+                  >
+                </li>
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#"> Одежда (<span>235</span>)</a>
+                </li>
+              </ol>
+            </div>
+            <div class="search-tips__box">
+              <div class="search-tips-subtitle">Франшизы:</div>
+              <a class="search-tips__link" href="#">Молодежная одежда</a>
+            </div>
+            <a class="search-tips__link-bottom" href="#">Искать везде</a>
           </div>
           <ul class="mobile-modal__nav">
             <li>
@@ -520,8 +566,41 @@
           <button class="mobile-modal__back" type="button" data-close-modal=""></button>
         </div>
         <div class="mobile-modal__body">
-          <div class="mobile-modal__search">
-            <input type="text" class="mobile-modal__search-input" placeholder="Поиск" />
+          <div class="mobile-modal__body-box">
+            <div class="mobile-modal__search">
+              <input type="text" class="mobile-modal__search-input" placeholder="Поиск" />
+            </div>
+            <button class="mobile-modal__search-btn btn2" type="button">Найти</button>
+          </div>
+
+          <div class="search-tips">
+            <div class="search-tips__box">
+              <div class="search-tips-subtitle">Категории:</div>
+              <ol class="search-tips__list">
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#"> Франшизы </a>
+                </li>
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#"> Все бизнесы (<span>2312</span>) </a>
+                </li>
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#"> Торговля (<span>1052</span>)</a>
+                </li>
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#">
+                    Одежда, обувь и аксессуары (<span>440</span>)</a
+                  >
+                </li>
+                <li class="search-tips__item">
+                  <a class="search-tips__link" href="#"> Одежда (<span>235</span>)</a>
+                </li>
+              </ol>
+            </div>
+            <div class="search-tips__box">
+              <div class="search-tips-subtitle">Франшизы:</div>
+              <a class="search-tips__link" href="#">Молодежная одежда</a>
+            </div>
+            <a class="search-tips__link-bottom" href="#">Искать везде</a>
           </div>
           <ul class="mobile-modal__nav mobile-modal__nav-last">
             <li><a href="#">Одежда (253)</a></li>
@@ -1656,7 +1735,16 @@
             <button type="button" class="scroll-top__btn"></button>
           </div>
 
-          <button type="button" class="side-add-btn"></button>
+          <button class="side-add-btn">
+            <div class="side-add-btn__container">
+              <div class="side-add-btn__content">
+                <div class="side-add-btn__icon"></div>
+                <div class="side-add-btn__desc">
+                  <div class="side-add-btn__text">Продать предложение</div>
+                </div>
+              </div>
+            </div>
+          </button>
         </div>
       </main>
 
@@ -2460,10 +2548,12 @@
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-1">Д1</button>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-2">Д2</button>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-3">Д3</button>
-      <button type="button" class="dev-block__dialog-btn js-open-modal" data-id="dialog-help">
+      <button type="button" class="dev-block__dialog-btn js-open-help" data-id="dialog-help">
         help
       </button>
-      <button type="button" class="dev-block__dialog-btn" data-id="dialog-comp">comp</button>
+      <button type="button" class="dev-block__dialog-btn js-open-comp" data-id="dialog-comp">
+        comp
+      </button>
       <label class="dev-block__switch">
         <input type="checkbox" id="dev-fixed-width" />
         <div class="dev-block__switch-els">

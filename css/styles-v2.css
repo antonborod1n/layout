@@ -2467,11 +2467,12 @@ input.mobile-modal__search-input {
 .mobile-modal__body .search-tips {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   top: 115px;
   z-index: 1;
   transform: translateY(500%);
   visibility: hidden;
-  pointer-events: none;
   transition: transform 0.1s, visibility 0.3s;
   padding: 16px 15px;
   background-color: #fcfcfd;
