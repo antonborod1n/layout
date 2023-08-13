@@ -512,11 +512,17 @@
         <div class="mobile-modal__body">
           <div class="mobile-modal__body-box">
             <div class="mobile-modal__search">
-              <input type="text" class="mobile-modal__search-input" placeholder="Поиск" />
+              <input
+                type="text"
+                class="mobile-modal__search-input mobile-modal__search-input1"
+                placeholder="Поиск"
+              />
             </div>
-            <button class="mobile-modal__search-btn btn2" type="button">Найти</button>
+            <button class="mobile-modal__search-btn mobile-modal__search-btn1 btn2" type="button">
+              Найти
+            </button>
           </div>
-          <div class="search-tips">
+          <div class="search-tips search-tips1">
             <div class="search-tips__box">
               <div class="search-tips-subtitle">Категории:</div>
               <ol class="search-tips__list">
@@ -568,12 +574,18 @@
         <div class="mobile-modal__body">
           <div class="mobile-modal__body-box">
             <div class="mobile-modal__search">
-              <input type="text" class="mobile-modal__search-input" placeholder="Поиск" />
+              <input
+                type="text"
+                class="mobile-modal__search-input mobile-modal__search-input2"
+                placeholder="Поиск"
+              />
             </div>
-            <button class="mobile-modal__search-btn btn2" type="button">Найти</button>
+            <button class="mobile-modal__search-btn mobile-modal__search-btn2 btn2" type="button">
+              Найти
+            </button>
           </div>
 
-          <div class="search-tips">
+          <div class="search-tips search-tips2">
             <div class="search-tips__box">
               <div class="search-tips-subtitle">Категории:</div>
               <ol class="search-tips__list">
@@ -1929,8 +1941,12 @@
               </div>
             </div>
             <div class="footer-nav__btns">
-              <button type="button" class="btn-footer-help">Помощь</button>
-              <button type="button" class="btn-footer-warn">Пожаловаться</button>
+              <button type="button" class="btn-footer-help js-open-help" data-id="dialog-help">
+                Помощь
+              </button>
+              <button type="button" class="btn-footer-warn js-open-comp" data-id="dialog-comp">
+                Пожаловаться
+              </button>
             </div>
           </div>
         </div>
@@ -2092,9 +2108,14 @@
       <h2>Выберите географию</h2>
       <div class="dialog-search">
         <div class="dialog-search-box">
-          <input type="text" placeholder="Искать" class="dialog-search-box__input" />
+          <input
+            type="text"
+            id="inputSearch"
+            placeholder="Искать"
+            class="dialog-search-box__input"
+          />
         </div>
-        <div class="dialog-search-tips tips is-active">
+        <div class="dialog-search-tips1 dialog-search-tips tips">
           <ul class="tips__list">
             <li class="tips__item">
               <button class="tips__btn" href="#">Россия (<span>10 307</span>)</button>
@@ -2277,7 +2298,7 @@
             <div class="dialog-form__row">
               <span class="dialog__subtitle">Что произошло?</span>
               <button class="dialog__btn-problem" type="button">Техническая проблема</button>
-              <div class="dialog-form__tips tips">
+              <div class="dialog-form__tips tips is-active">
                 <ul class="tips__list">
                   <li class="tips__item">
                     <button class="tips__btn" type="button" value="teh">
@@ -2548,12 +2569,7 @@
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-1">Д1</button>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-2">Д2</button>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-3">Д3</button>
-      <button type="button" class="dev-block__dialog-btn js-open-help" data-id="dialog-help">
-        help
-      </button>
-      <button type="button" class="dev-block__dialog-btn js-open-comp" data-id="dialog-comp">
-        comp
-      </button>
+
       <label class="dev-block__switch">
         <input type="checkbox" id="dev-fixed-width" />
         <div class="dev-block__switch-els">
@@ -2668,6 +2684,54 @@
             overlayClose: false,
           });
         });
+      });
+      //кнопка
+      const widget = document.querySelector('.side-add-btn');
+      const desc = document.querySelector('.side-add-btn__desc');
+      const maxWidth = desc.scrollWidth + 'px';
+      desc.style.maxWidth = 0;
+
+      widget.addEventListener('mouseover', open);
+      widget.addEventListener('mouseout', close);
+
+      function open() {
+        desc.style.maxWidth = maxWidth;
+        desc.classList.add('open');
+      }
+      function close() {
+        desc.style.maxWidth = 0;
+        desc.classList.remove('open');
+      }
+
+      const searchInput1 = document.querySelector('.mobile-modal__search-input1');
+      const searchBtn1 = document.querySelector('.mobile-modal__search-btn1');
+      const searchTip1 = document.querySelector('.search-tips1');
+
+      const searchInput2 = document.querySelector('.mobile-modal__search-input2');
+      const searchBtn2 = document.querySelector('.mobile-modal__search-btn2');
+      const searchTip2 = document.querySelector('.search-tips2');
+
+      const btnBack = document.querySelectorAll('.mobile-modal__back');
+      const searchInputs = document.querySelectorAll('.mobile-modal__search-input');
+      const searchTips = document.querySelectorAll('.search-tips');
+
+      btnBack.forEach((el) => {
+        el.addEventListener('click', function () {
+          searchInputs.forEach((item) => {
+            item.value = '';
+          });
+          searchTips.forEach((item) => {
+            item.classList.remove('is-active');
+          });
+        });
+      });
+      searchInput1.addEventListener('click', function () {
+        searchTip1.classList.toggle('is-active');
+        searchBtn1.classList.toggle('is-active');
+      });
+      searchInput2.addEventListener('click', function () {
+        searchTip2.classList.toggle('is-active');
+        searchBtn2.classList.toggle('is-active');
       });
     </script>
   </body>

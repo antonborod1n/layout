@@ -279,30 +279,12 @@ $(function () {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  //кнопка
-  const widget = document.querySelector('.side-add-btn');
-  const desc = document.querySelector('.side-add-btn__desc');
-  const maxWidth = desc.scrollWidth + 'px';
-  desc.style.maxWidth = 0;
-
-  widget.addEventListener('mouseover', open);
-  widget.addEventListener('mouseout', close);
-
-  function open() {
-    desc.style.maxWidth = maxWidth;
-    desc.classList.add('open');
-  }
-  function close() {
-    desc.style.maxWidth = 0;
-    desc.classList.remove('open');
-  }
-
   //активный элемент
-  const elem = document.querySelectorAll('.small-carousel__item');
+  const carouseltem = document.querySelectorAll('.small-carousel__item');
 
-  elem.forEach((item) => {
+  carouseltem.forEach((item) => {
     item.addEventListener('click', function () {
-      elem.forEach((element) => {
+      carouseltem.forEach((element) => {
         if (element.classList.contains('is-active')) {
           element.classList.remove('is-active');
         }
@@ -311,82 +293,21 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const searchInputs = document.querySelectorAll('.mobile-modal__search-input');
-  const searchBtns = document.querySelectorAll('.mobile-modal__search-btn');
-  const searchTips = document.querySelectorAll('.search-tips');
+  /*   const input = document.querySelector('.dialog__btn-problem');
+  const tips = document.querySelector('.dialog-form__tips');
 
-  searchInputs.forEach((item) => {
-    item.addEventListener('click', function () {
-      searchTips.forEach((element) => {
-        element.classList.toggle('is-active');
-      });
-      searchBtns.forEach((item) => {
-        item.classList.toggle('is-active');
-      });
-    });
+  input.addEventListener('click', function () {
+    tips.classList.toggle('is-active');
   });
 
-  /*  const openS = document.querySelector('.js-open-comp');
+  document.addEventListener('click', function (e) {
+    const target = e.target;
+    const menu = target == tips || tips.contains(target);
+    const btnMenu = target == input;
+    const menuActive = tips.classList.contains('is-active');
 
-  openS.addEventListener('click', function () {
-    const openBtnProblemn = document.querySelector('.dialog__btn-problem');
-    const openS = document.querySelector('.dialog-input');
-
-    console.log(openS);
-
-    openS.addEventListener('click', function (e) {
-      let event = e.target;
-      console.log(event);
-    });
-  });
-
-  let box = document.querySelector('.c-dialog');
-  let popups = document.querySelectorAll('.dialog-form__tips');
-
-  function delegete(box, eventname, selector, btn) {
-    box.addEventListener(eventname, function (e) {
-      let event = e.target;
-      console.log(event);
-      popups.forEach((item) => {
-        item.classList.remove('active');
-      });
-
-      if (event.classList.contains(btn)) {
-        let parent = event.closest(selector);
-        if (parent != null && box.contains(parent)) {
-          parent.querySelector('.dialog-form__tips').classList.add('is-active');
-        }
-      }
-    });
-  }
-
-  delegete(box, 'click', '.dialog-form__tips', '.dialog__btn-problem'); */
-
-  //Делегирование
-
-  //currancy
-  /*   const currencyMainBtn = document.querySelector('.header-dpd__main-btn');
-  const currencyMainBtnM = document.querySelector('.header-mobile__settings button');
-  const currencyBtns = document.querySelectorAll('.header-dpd__btn');
-  const currencyBtnsM = document.querySelectorAll('.field-radio__label');
-  const currencyMainBtnValue = currencyMainBtnM.querySelector('strong');
-
-  currencyMainBtnM.addEventListener('click', changeValueMobile);
-  currencyMainBtn.addEventListener('click', changeValueDesctop);
-
-  function changeValueMobile() {
-    currencyBtnsM.forEach((item) => {
-      item.addEventListener('click', function () {
-        currencyMainBtnValue.textContent = item.innerHTML;
-      });
-    });
-  }
-
-  function changeValueDesctop() {
-    currencyBtns.forEach((item) => {
-      item.addEventListener('click', function () {
-        currencyMainBtn.textContent = item.innerHTML;
-      });
-    });
-  } */
+    if (!menu && !btnMenu && menuActive) {
+      tips.classList.toggle('is-active');
+    }
+  }); */
 });

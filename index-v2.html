@@ -94,25 +94,23 @@
               </div>
               <div class="header-settings">
                 <div class="header-dpd header-dpd--currency">
-                  <button type="button" class="header-dpd__value header-dpd__main-btn">
-                    Рyб. (RUB)
-                  </button>
+                  <button type="button" class="header-dpd__value">Рyб. (RUB)</button>
                   <div class="header-dpd__body">
                     <input type="text" placeholder="Поиск" class="header-dpd__search" />
                     <div class="header-dpd__options">
-                      <button class="header-dpd__btn" type="button" value="EUR">€ (EUR)</button>
-                      <button class="header-dpd__btn" type="button" value="USD">$ (USD)</button>
-                      <button class="header-dpd__btn" type="button" value="GBP">£ (GBP)</button>
-                      <button class="header-dpd__btn" type="button" value="CHF">₣ (CHF)</button>
-                      <button class="header-dpd__btn" type="button" value="RUB">руб. (RUB)</button>
-                      <button class="header-dpd__btn" type="button" value="AMD">AMD</button>
-                      <button class="header-dpd__btn" type="button" value="AUD">$ (AUD)</button>
-                      <button class="header-dpd__btn" type="button" value="AZN">AZN</button>
-                      <button class="header-dpd__btn" type="button" value="BGN">лв. (BGN)</button>
-                      <button class="header-dpd__btn" type="button" value="BRL">$ (BRL)</button>
-                      <button class="header-dpd__btn" type="button" value="BYN">р. (BYN)</button>
-                      <button class="header-dpd__btn" type="button" value="CAD">$ (CAD)</button>
-                      <button class="header-dpd__btn" type="button" value="CNY">¥ (CNY)</button>
+                      <div value="EUR">€ (EUR)</div>
+                      <div value="USD">$ (USD)</div>
+                      <div value="GBP">£ (GBP)</div>
+                      <div value="CHF">₣ (CHF)</div>
+                      <div value="RUB">руб. (RUB)</div>
+                      <div value="AMD">AMD</div>
+                      <div value="AUD">$ (AUD)</div>
+                      <div value="AZN">AZN</div>
+                      <div value="BGN">лв. (BGN)</div>
+                      <div value="BRL">$ (BRL)</div>
+                      <div value="BYN">р. (BYN)</div>
+                      <div value="CAD">$ (CAD)</div>
+                      <div value="CNY">¥ (CNY)</div>
                     </div>
                   </div>
                 </div>
@@ -514,11 +512,17 @@
         <div class="mobile-modal__body">
           <div class="mobile-modal__body-box">
             <div class="mobile-modal__search">
-              <input type="text" class="mobile-modal__search-input" placeholder="Поиск" />
+              <input
+                type="text"
+                class="mobile-modal__search-input mobile-modal__search-input1"
+                placeholder="Поиск"
+              />
             </div>
-            <button class="mobile-modal__search-btn btn2" type="button">Найти</button>
+            <button class="mobile-modal__search-btn mobile-modal__search-btn1 btn2" type="button">
+              Найти
+            </button>
           </div>
-          <div class="search-tips">
+          <div class="search-tips search-tips1">
             <div class="search-tips__box">
               <div class="search-tips-subtitle">Категории:</div>
               <ol class="search-tips__list">
@@ -570,11 +574,17 @@
         <div class="mobile-modal__body">
           <div class="mobile-modal__body-box">
             <div class="mobile-modal__search">
-              <input type="text" class="mobile-modal__search-input" placeholder="Поиск" />
+              <input
+                type="text"
+                class="mobile-modal__search-input mobile-modal__search-input2"
+                placeholder="Поиск"
+              />
             </div>
-            <button class="mobile-modal__search-btn btn2" type="button">Найти</button>
+            <button class="mobile-modal__search-btn mobile-modal__search-btn2 btn2" type="button">
+              Найти
+            </button>
           </div>
-          <!-- <div class="search-tips">
+          <div class="search-tips search-tips2">
             <div class="search-tips__box">
               <div class="search-tips-subtitle">Категории:</div>
               <ol class="search-tips__list">
@@ -602,7 +612,7 @@
               <a class="search-tips__link" href="#">Молодежная одежда</a>
             </div>
             <a class="search-tips__link-bottom" href="#">Искать везде</a>
-          </div> -->
+          </div>
           <ul class="mobile-modal__nav mobile-modal__nav-last">
             <li><a href="#">Одежда (253)</a></li>
             <li><a class="is-active" href="#">Аксессуары и прочее (202)</a></li>
@@ -1909,8 +1919,12 @@
               </div>
             </div>
             <div class="footer-nav__btns">
-              <button type="button" class="btn-footer-help">Помощь</button>
-              <button type="button" class="btn-footer-warn">Пожаловаться</button>
+              <button type="button" class="btn-footer-help js-open-help" data-id="dialog-help">
+                Помощь
+              </button>
+              <button type="button" class="btn-footer-warn js-open-comp" data-id="dialog-comp">
+                Пожаловаться
+              </button>
             </div>
           </div>
         </div>
@@ -2246,6 +2260,277 @@
       </div>
     </div>
 
+    <div id="dialog-comp" style="display: none">
+      <div class="dialog__inner">
+        <h2 class="dialog__title">Пожаловаться</h2>
+        <div class="dialog__box">
+          <button class="dialog__btn dialog__btn2">Часто задаваемые вопросы</button>
+          <button class="dialog__btn dialog__btn1">Задать свой вопрос</button>
+        </div>
+        <form class="dialog-form" action="#" method="post" enctype="multipart/form-data">
+          <div class="dialog-form__inner">
+            <div class="dialog-form__row">
+              <span class="dialog__subtitle">Что произошло?</span>
+              <button class="dialog__btn-problem" type="button">Техническая проблема</button>
+              <div class="dialog-form__tips tips is-active">
+                <ul class="tips__list">
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="teh">
+                      Техническая проблема
+                    </button>
+                  </li>
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="comp">Жалоба</button>
+                  </li>
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="upgr">Улучшение сервиса</button>
+                  </li>
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="coll">Сотрудничество</button>
+                  </li>
+                  <li class="tips__item">
+                    <button class="tips__btn" type="button" value="other">Прочее</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dialog-form__row">
+              <span class="dialog__subtitle">Чем мы можем вам помочь? <span>*</span></span>
+              <input
+                class="dialog-input"
+                id="userHelp"
+                type="text"
+                placeholder="Введите текст"
+                name="user-text"
+                required
+              />
+            </div>
+            <div class="dialog-form__row">
+              <span class="dialog__subtitle">Ваша почта:</span>
+              <input
+                class="dialog-input"
+                id="userEmail"
+                type="email"
+                placeholder="ivan@mail.ru"
+                name="user-email"
+              />
+            </div>
+            <div class="dialog__bottom">
+              <div class="dialog-form__row">
+                <input class="dialog-form__file" type="file" name="user-file" />
+                <button class="dialog__form__file-btn" type="button">Выберите файл</button>
+              </div>
+              <button class="dialog-btn__submit btn2">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="dialog-help" style="display: none">
+      <div class="dialog__inner">
+        <h2 class="dialog__title">Помощь</h2>
+        <div class="dialog__box">
+          <button class="dialog__btn dialog__btn1">Часто задаваемые вопросы</button>
+          <button class="dialog__btn dialog__btn2">Задать свой вопрос</button>
+        </div>
+        <div class="faq faq-modal">
+          <div class="faq-item">
+            <button type="button" class="faq-item__head is-active">
+              Как связаться с продавцом
+            </button>
+            <div class="faq-item__body is-active">
+              <p>
+                B лeвoй чacти aктивнoгo oбъявлeния ecть блoк для cвязи c пpoдaвцoм. Ecли в
+                oбъявлeнии тeлeфoн нe yкaзaн, тo вы мoжeтe нaпиcaть eмy cooбщeниe. Baшe cooбщeниe
+                гapaнтиpoвaннo дoйдeт дo пpoдaвцa. Mы oтпpaвляeм вaшe cooбщeниe нe тoлькo пo пoчтe,
+                нo и пo cмc.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Объявления актуальны?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Как подать свое объявление?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Сколько стоит публикация на сайте?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Какова посещаемость сайта?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Как быстро объявление будет опубликовано?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Как внести правки в объявление?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Как поменять основной телефон?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Как изменить статус с посредника на собственника?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Как удалить свой аккаунт на сайте?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Как отключить автопродление?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Как восстановить пароль к личному кабинету?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Как оплатить с расчетного счета?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Предоставляете закрывающие документы?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">
+              Оказываете ли вы услуги по сопровождению сделки?
+            </button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Работаете ли вы за комиссию?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-item__head">Кто может помочь с продажей?</button>
+            <div class="faq-item__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
+                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
+                minima excepturi nesciunt molestias, cumque ab quos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="dialog__text">
+          He нaшли oтвeт cpeди cтaндapтныx вoпpocoв?
+          <a class="dialog__link" href="#">Пoпpoбyйтe зaдaть cвoй</a>
+        </p>
+      </div>
+    </div>
+
     <div class="dev-block">
       <ul class="dev-block__pages">
         <li><a href="index-2.html">index.html - А</a></li>
@@ -2371,6 +2656,54 @@
             overlayClose: false,
           });
         });
+      });
+      //кнопка
+      const widget = document.querySelector('.side-add-btn');
+      const desc = document.querySelector('.side-add-btn__desc');
+      const maxWidth = desc.scrollWidth + 'px';
+      desc.style.maxWidth = 0;
+
+      widget.addEventListener('mouseover', open);
+      widget.addEventListener('mouseout', close);
+
+      function open() {
+        desc.style.maxWidth = maxWidth;
+        desc.classList.add('open');
+      }
+      function close() {
+        desc.style.maxWidth = 0;
+        desc.classList.remove('open');
+      }
+
+      const searchInput1 = document.querySelector('.mobile-modal__search-input1');
+      const searchBtn1 = document.querySelector('.mobile-modal__search-btn1');
+      const searchTip1 = document.querySelector('.search-tips1');
+
+      const searchInput2 = document.querySelector('.mobile-modal__search-input2');
+      const searchBtn2 = document.querySelector('.mobile-modal__search-btn2');
+      const searchTip2 = document.querySelector('.search-tips2');
+
+      const btnBack = document.querySelectorAll('.mobile-modal__back');
+      const searchInputs = document.querySelectorAll('.mobile-modal__search-input');
+      const searchTips = document.querySelectorAll('.search-tips');
+
+      btnBack.forEach((el) => {
+        el.addEventListener('click', function () {
+          searchInputs.forEach((item) => {
+            item.value = '';
+          });
+          searchTips.forEach((item) => {
+            item.classList.remove('is-active');
+          });
+        });
+      });
+      searchInput1.addEventListener('click', function () {
+        searchTip1.classList.toggle('is-active');
+        searchBtn1.classList.toggle('is-active');
+      });
+      searchInput2.addEventListener('click', function () {
+        searchTip2.classList.toggle('is-active');
+        searchBtn2.classList.toggle('is-active');
       });
     </script>
   </body>

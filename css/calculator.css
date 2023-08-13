@@ -22,6 +22,7 @@
 .cost-calc__city-tips.tips.is-active,
 .dialog-form__tips.tips.is-active {
   position: absolute;
+  z-index: 1;
   display: block;
   width: 100%;
   margin-top: 4px;
