@@ -1,0 +1,40 @@
+<svg width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2847_6219)">
+<g filter="url(#filter0_i_2847_6219)">
+<path d="M4.96939 0.5L6.5 3.31633L9.50002 3.92858L7.35716 6.31633L7.7857 9.5L4.96939 8.09184L2.21428 9.5L2.58161 6.31633L0.5 3.92858L3.49998 3.31633L4.96939 0.5Z" fill="#FFC500"/>
+</g>
+</g>
+<g clip-path="url(#clip1_2847_6219)">
+<g filter="url(#filter1_i_2847_6219)">
+<path d="M16.9694 0.5L18.5 3.31633L21.5 3.92858L19.3572 6.31633L19.7857 9.5L16.9694 8.09184L14.2143 9.5L14.5816 6.31633L12.5 3.92858L15.5 3.31633L16.9694 0.5Z" fill="#FFC500"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_i_2847_6219" x="0.5" y="0.5" width="9" height="10" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.52549 0 0 0 0 0.6 0 0 0 0.73 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2847_6219"/>
+</filter>
+<filter id="filter1_i_2847_6219" x="12.5" y="0.5" width="9" height="10" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.52549 0 0 0 0 0.6 0 0 0 0.73 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2847_6219"/>
+</filter>
+<clipPath id="clip0_2847_6219">
+<rect width="10" height="10" fill="white"/>
+</clipPath>
+<clipPath id="clip1_2847_6219">
+<rect width="10" height="10" fill="white" transform="translate(12)"/>
+</clipPath>
+</defs>
+</svg>
