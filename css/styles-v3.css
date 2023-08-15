@@ -3681,9 +3681,6 @@ a.suggestions-carousel__item:hover {
     margin-right: -30px;
     padding: 0 0 5px;
   }
-  .listed-item__action .btn-primary {
-    width: 100%;
-  }
   .listed-item__side-btns {
     top: 14px;
     right: 8px;
@@ -5284,9 +5281,12 @@ input.page-filter__search-input {
 .page-filter__selected-clear {
   height: 36px;
   padding: 0 11px;
-  border-color: #4192d9;
-  color: #4192d9;
+  border-color: #f24831;
+  color: #f24831;
   font-weight: bold;
+}
+.page-filter__selected-clear:hover {
+  background-color: #ffe4ef;
 }
 @media (max-width: 768px) {
   .page-filter {
@@ -5393,7 +5393,7 @@ body {
   }
 }
 .page-breadcrumbs {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   color: #9da8ad;
 }
 .page-breadcrumbs ul {
@@ -5416,7 +5416,7 @@ body {
   display: none;
 }
 main h1 {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-size: 24px;
 }
 .small-carousel {
@@ -5501,7 +5501,9 @@ main h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 4px;
   margin-bottom: 12px;
   padding: 8px 0 3px;
   border-top: 1px solid #d6e0e4;
@@ -5574,6 +5576,15 @@ main h1 {
   background: #f3f3f4;
   border-color: #f3f3f4;
   font-weight: bold;
+}
+@media (max-width: 375px) {
+  .listed-item__action .btn-primary {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .listed-item__action .btn-secondary {
+    padding: 0 15px;
+  }
 }
 .results-more {
   height: 50px;
