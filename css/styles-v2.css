@@ -2097,6 +2097,13 @@ input:-ms-input-placeholder {
     padding-top: 7px;
   }
 }
+@media (max-width: 375px) {
+  .footer-links ul {
+    -webkit-columns: 120px;
+    -moz-columns: 120px;
+    columns: 120px;
+  }
+}
 .carousel__btn-prev,
 .carousel__btn-next {
   visibility: hidden;
