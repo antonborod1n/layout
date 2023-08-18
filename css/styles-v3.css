@@ -3591,6 +3591,13 @@ a.suggestions-carousel__item:hover {
   font-weight: 700;
   line-height: 1;
 }
+.listed-item__price-m {
+  display: none;
+  color: #4192d9;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
 .listed-item__list {
   margin-bottom: 15px;
   font-size: 12px;
@@ -3689,10 +3696,13 @@ a.suggestions-carousel__item:hover {
   }
   .listed-item__details h3 {
     font-size: 14px;
+    margin-bottom: 8px;
   }
   .listed-item__price {
-    /* font-size: 14px; */
     display: none;
+  }
+  .listed-item__price-m {
+    display: block;
   }
   .listed-item__list {
     margin-bottom: 6px;
@@ -5510,6 +5520,11 @@ main h1 {
 .listed-item__loc {
   margin: 10px 0;
   font-size: 12px;
+}
+@media (max-width: 768px) {
+  .listed-item__loc {
+    margin: 4px 0 10px;
+  }
 }
 .listed-item__loc-region {
   margin-bottom: 2px;
