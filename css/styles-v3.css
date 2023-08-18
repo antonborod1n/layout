@@ -5813,7 +5813,11 @@ main h1 {
   border: 1px solid #d6e0e4;
   outline: none;
 }
-.dialog-form__row {
+.dialog-form .dialog-textarea {
+  min-height: 100px;
+  resize: none;
+}
+.dialog-form .dialog-form__row {
   position: relative;
   display: flex;
   flex-direction: column;

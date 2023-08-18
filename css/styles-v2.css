@@ -5376,6 +5376,11 @@ body {
   border: 1px solid #d6e0e4;
   outline: none;
 }
+.dialog-form .dialog-textarea {
+  min-height: 34px;
+  width: 100% !important;
+  height: 100%;
+}
 .dialog-form__row {
   position: relative;
   display: flex;

@@ -293,6 +293,14 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const textarea = document.querySelector('textarea');
+
+  textarea.addEventListener('keyup', function () {
+    if (this.scrollTop > 0) {
+      this.style.height = this.scrollHeight + 'px';
+    }
+  });
+
   /*   const input = document.querySelector('.dialog__btn-problem');
   const tips = document.querySelector('.dialog-form__tips');
 
