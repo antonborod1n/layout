@@ -293,15 +293,20 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* 
+  ---TEXTAREA
   const textarea = document.querySelector('textarea');
 
   textarea.addEventListener('keyup', function () {
     if (this.scrollTop > 0) {
       this.style.height = this.scrollHeight + 'px';
     }
-  });
+  }); 
+  */
 
-  /*   const input = document.querySelector('.dialog__btn-problem');
+  /*   
+  ---При клике вне области
+  const input = document.querySelector('.dialog__btn-problem');
   const tips = document.querySelector('.dialog-form__tips');
 
   input.addEventListener('click', function () {
@@ -317,5 +322,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (!menu && !btnMenu && menuActive) {
       tips.classList.toggle('is-active');
     }
-  }); */
+  }); 
+  */
 });

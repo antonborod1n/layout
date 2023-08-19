@@ -1394,7 +1394,11 @@
               <button type="button" class="btn-footer-help js-open-help" data-id="dialog-help">
                 Помощь
               </button>
-              <button type="button" class="btn-footer-warn js-open-comp" data-id="dialog-comp">
+              <button
+                type="button"
+                class="btn-footer-warn js-open-comp js-open-modal"
+                data-id="dialog-comp"
+              >
                 Пожаловаться
               </button>
             </div>
@@ -1558,7 +1562,12 @@
       <h2>Выберите географию</h2>
       <div class="dialog-search">
         <div class="dialog-search-box">
-          <input type="text" placeholder="Искать" class="dialog-search-box__input" />
+          <input
+            type="text"
+            placeholder="Искать"
+            class="dialog-search-box__input"
+            onclick="return activeTips()"
+          />
         </div>
         <div class="dialog-search-tips tips">
           <ul class="tips__list">
@@ -1735,14 +1744,19 @@
       <div class="dialog__inner">
         <h2 class="dialog__title">Пожаловаться</h2>
         <div class="dialog__box">
-          <button class="dialog__btn dialog__btn2">Часто задаваемые вопросы</button>
+          <button class="dialog__btn dialog__btn2 js-open-help">Часто задаваемые вопросы</button>
           <button class="dialog__btn dialog__btn1">Задать свой вопрос</button>
         </div>
         <form class="dialog-form" action="#" method="post" enctype="multipart/form-data">
           <div class="dialog-form__inner">
             <div class="dialog-form__row">
               <span class="dialog__subtitle">Что произошло?</span>
-              <input class="dialog-input" type="text" placeholder="Техническая проблема" />
+              <input
+                class="dialog-input dialog-input-teh"
+                type="text"
+                placeholder="Техническая проблема"
+                onclick="return activeTips()"
+              />
               <div class="dialog-form__tips tips">
                 <ul class="tips__list">
                   <li class="tips__item">
@@ -1767,14 +1781,14 @@
             </div>
             <div class="dialog-form__row">
               <span class="dialog__subtitle">Чем мы можем вам помочь? <span>*</span></span>
-              <input
-                class="dialog-input"
+              <textarea
+                class="dialog-input dialog-textarea"
                 id="userHelp"
                 type="text"
                 placeholder="Введите текст"
                 name="user-text"
                 required
-              />
+              ></textarea>
             </div>
             <div class="dialog-form__row">
               <span class="dialog__subtitle">Ваша почта:</span>
@@ -1803,7 +1817,7 @@
         <h2 class="dialog__title">Помощь</h2>
         <div class="dialog__box">
           <button class="dialog__btn dialog__btn1">Часто задаваемые вопросы</button>
-          <button class="dialog__btn dialog__btn2">Задать свой вопрос</button>
+          <button class="dialog__btn dialog__btn2 js-open-comp">Задать свой вопрос</button>
         </div>
         <div class="faq faq-modal">
           <div class="faq-item">
@@ -2013,7 +2027,9 @@
       </ul>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-1">Д1</button>
       <button type="button" class="dev-block__dialog-btn" data-id="dialog-2">Д2</button>
-      <button type="button" class="dev-block__dialog-btn" data-id="dialog-3">Д3</button>
+      <button type="button" class="dev-block__dialog-btn js-open-modal" data-id="dialog-3">
+        Д3
+      </button>
       <label class="dev-block__switch">
         <input type="checkbox" id="dev-fixed-width" />
         <div class="dev-block__switch-els">
@@ -2130,38 +2146,6 @@
         });
       });
 
-      /*     const citySearchInputs = document.querySelectorAll('.cost-calc__input');
-
-      citySearchInputs.forEach((item) => {
-        item.addEventListener('click', function (e) {
-          item.nextElementSibling.classList.toggle('is-active');
-        });
-      }); 
-
-      let section = document.querySelector('.city');
-      let tips = document.querySelectorAll('.cost-calc__city-tips'); 
-
-       function delegete(box, selector, input) {
-        box.addEventListener('click', function (e) {
-          let event = e.target;
-
-          tips.forEach((item) => {
-            item.classList.remove('is-active');
-          });
-          
-          if (event.classList.contains(input)) {
-            let parent = event.closest(selector);
-            console.log(event);
-
-            if (parent != null && box.contains(parent)) {
-              parent.querySelector('.popup').classList.add('active');
-            }
-          }
-        });
-      }
-
-      delegete(section, '.cost-calc__city-tips', 'cost-calc__input'); */
-
       const input = document.querySelector('.cost-calc__input');
       const tips = document.querySelector('.cost-calc__city-tips');
 
@@ -2179,6 +2163,20 @@
           tips.classList.toggle('is-active');
         }
       });
+
+      document
+        .querySelectorAll('.js-open-modal')
+        .forEach((item) => item.addEventListener('click', remove));
+
+      function remove() {
+        const tips = document.querySelectorAll('.tips');
+        tips.forEach((item) => item.classList.remove('is-active'));
+      }
+
+      function activeTips() {
+        const tips = document.querySelectorAll('.tips');
+        tips.forEach((item) => item.classList.toggle('is-active'));
+      }
     </script>
   </body>
 
