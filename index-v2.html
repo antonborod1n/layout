@@ -2653,7 +2653,7 @@
           });
         });
       });
-      //кнопка
+      //кнопка плюс
       const widget = document.querySelector('.side-add-btn');
       const desc = document.querySelector('.side-add-btn__desc');
       const maxWidth = desc.scrollWidth + 'px';
@@ -2702,6 +2702,7 @@
         searchBtn2.classList.toggle('is-active');
       });
 
+      //Подсказки в модальных окнах
       document
         .querySelectorAll('.js-open-modal')
         .forEach((item) => item.addEventListener('click', remove));

@@ -5261,6 +5261,7 @@ body {
 }
 .dialog__btn1 {
   background-color: rgba(214, 224, 228, 0.2);
+  cursor: auto;
 }
 .dialog__btn.dialog__btn2 {
   color: #4192d9;
