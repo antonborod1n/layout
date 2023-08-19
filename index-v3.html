@@ -2704,14 +2704,7 @@
         desc.classList.remove('open');
       }
 
-      const searchInput1 = document.querySelector('.mobile-modal__search-input1');
-      const searchBtn1 = document.querySelector('.mobile-modal__search-btn1');
-      const searchTip1 = document.querySelector('.search-tips1');
-
-      const searchInput2 = document.querySelector('.mobile-modal__search-input2');
-      const searchBtn2 = document.querySelector('.mobile-modal__search-btn2');
-      const searchTip2 = document.querySelector('.search-tips2');
-
+      //Удалить класс в input
       const btnBack = document.querySelectorAll('.mobile-modal__back');
       const searchInputs = document.querySelectorAll('.mobile-modal__search-input');
       const searchTips = document.querySelectorAll('.search-tips');
@@ -2727,14 +2720,24 @@
         });
       });
 
-      searchInput1.addEventListener('click', function () {
-        searchTip1.classList.toggle('is-active');
-        searchBtn1.classList.toggle('is-active');
-      });
-      searchInput2.addEventListener('click', function () {
-        searchTip2.classList.toggle('is-active');
-        searchBtn2.classList.toggle('is-active');
-      });
+      //Подсказки для фильтрации в мобильном
+      const searchInput1 = document.querySelector('.mobile-modal__search-input1');
+      const searchInput2 = document.querySelector('.mobile-modal__search-input2');
+
+      searchInput1.addEventListener('click', () =>
+        filterSearchTips('.mobile-modal__search-btn1', '.search-tips1'),
+      );
+      searchInput2.addEventListener('click', () =>
+        filterSearchTips('.mobile-modal__search-btn2', '.search-tips2'),
+      );
+
+      function filterSearchTips(btn, tip) {
+        const searchBtn = document.querySelector(btn);
+        const searchTip = document.querySelector(tip);
+
+        searchTip.classList.toggle('is-active');
+        searchBtn.classList.toggle('is-active');
+      }
 
       //Подсказки в модальных окнах
       document
