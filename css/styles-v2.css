@@ -5378,9 +5378,8 @@ body {
   outline: none;
 }
 .dialog-form .dialog-textarea {
-  min-height: 34px;
-  width: 100% !important;
-  height: 100%;
+  min-height: 100px;
+  resize: none;
 }
 .dialog-form__row {
   position: relative;

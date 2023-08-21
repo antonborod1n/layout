@@ -292,36 +292,4 @@ window.addEventListener('DOMContentLoaded', () => {
       item.classList.add('is-active');
     });
   });
-
-  /* 
-  ---TEXTAREA
-  const textarea = document.querySelector('textarea');
-
-  textarea.addEventListener('keyup', function () {
-    if (this.scrollTop > 0) {
-      this.style.height = this.scrollHeight + 'px';
-    }
-  }); 
-  */
-
-  /*   
-  ---При клике вне области
-  const input = document.querySelector('.dialog__btn-problem');
-  const tips = document.querySelector('.dialog-form__tips');
-
-  input.addEventListener('click', function () {
-    tips.classList.toggle('is-active');
-  });
-
-  document.addEventListener('click', function (e) {
-    const target = e.target;
-    const menu = target == tips || tips.contains(target);
-    const btnMenu = target == input;
-    const menuActive = tips.classList.contains('is-active');
-
-    if (!menu && !btnMenu && menuActive) {
-      tips.classList.toggle('is-active');
-    }
-  }); 
-  */
 });
