@@ -1452,7 +1452,7 @@ input:-ms-input-placeholder {
   font-size: 13px;
   font-weight: 700;
   line-height: 20px;
-  padding: 12px 15px 11px 40px;
+  padding: 8px 15px 8px 40px;
   text-transform: none;
 }
 .header-mobile__nav-link::before {
@@ -1480,7 +1480,6 @@ input:-ms-input-placeholder {
 .header-mobile__settings li {
   margin: 0;
   list-style: none;
-  border-bottom: 1px solid #6badc8;
 }
 .header-mobile__settings a,
 .header-mobile__settings button {
@@ -3168,7 +3167,7 @@ a.small-carousel__item:hover {
 }
 @media (max-width: 768px) {
   .small-carousel {
-    margin-bottom: 16px;
+    margin: 0 0 16px;
   }
   .small-carousel__btn-prev,
   .small-carousel__btn-next {
@@ -3680,7 +3679,6 @@ a.suggestions-carousel__item:hover {
   .listed-item {
     display: block;
     margin-bottom: 16px;
-    padding: 0;
     border: 1px solid #d6e0e4;
     border-radius: 3px;
   }
@@ -3695,7 +3693,7 @@ a.suggestions-carousel__item:hover {
     font-size: 8px;
   }
   .listed-item__details {
-    padding: 15px 40px 10px 10px;
+    padding: 16px 40px 16px 10px;
   }
   .listed-item__details h3 {
     font-size: 14px;
@@ -3743,7 +3741,9 @@ a.suggestions-carousel__item:hover {
   background: #fff;
 }
 .faq-header {
+  border: 1px solid #d6e0e4;
   padding: 12px 15px;
+  margin-bottom: -1px;
 }
 .faq-item {
   border: 1px solid #d6e0e4;
@@ -5394,6 +5394,7 @@ body {
 .small-carousel__btn-prev:hover,
 .small-carousel__btn-next:hover {
   opacity: 1;
+  background-color: #fff;
 }
 .small-carousel__btn-prev {
   left: -8px;
@@ -5466,6 +5467,11 @@ main h1 {
 .small-carousel {
   margin: 0 0 36px;
 }
+@media (max-width: 768px) {
+  .small-carousel {
+    margin: 0 0 16px;
+  }
+}
 .small-carousel__btn-prev,
 .small-carousel__btn-next {
   top: 0;
@@ -5497,7 +5503,7 @@ main h1 {
   margin: 0 4px;
   padding: 8px 12px;
   border: 1px solid #d6e0e4;
-  background: none;
+  background: #ffffff;
   white-space: nowrap;
 }
 .small-carousel__label {
@@ -5527,6 +5533,9 @@ main h1 {
 @media (max-width: 768px) {
   .listed-item__loc {
     margin: 4px 0 10px;
+  }
+  .listed-item {
+    padding: 0;
   }
 }
 .listed-item__loc-region {
