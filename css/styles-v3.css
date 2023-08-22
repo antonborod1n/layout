@@ -3140,9 +3140,6 @@ input.side-filter__search-input {
 .small-carousel__item.is-active {
   border: 1px solid #4192d9;
 }
-.small-carousel__item:hover {
-  border: 1px solid #4192d9;
-}
 a.small-carousel__item:hover {
   text-decoration: none;
   opacity: 0.8;
@@ -3750,7 +3747,7 @@ a.suggestions-carousel__item:hover {
 }
 .faq-item {
   border: 1px solid #d6e0e4;
-  margin-bottom: 8px;
+  margin-bottom: -1px;
 }
 .faq-item__head {
   position: relative;
@@ -3789,7 +3786,7 @@ a.suggestions-carousel__item:hover {
 }
 .faq-item__body {
   display: none;
-  padding: 15px;
+  padding: 0 15px 15px;
 }
 .faq-modal.faq {
   overflow: auto;
