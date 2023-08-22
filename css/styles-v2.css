@@ -5437,15 +5437,51 @@ body {
   transform: rotate(90deg);
 }
 .dialog-form .dialog-input {
+  color: #708699;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000;
   height: 34px;
   padding: 8px;
   border-radius: 3px;
   border: 1px solid #d6e0e4;
   outline: none;
 }
+.dialog-btn-teh {
+  position: relative;
+  color: #708699;
+  font-size: 12px;
+  line-height: 18px;
+  height: 34px;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #d6e0e4;
+  cursor: pointer;
+}
+.dialog-btn-teh:after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  width: 11px;
+  height: 10px;
+  background-image: url(../images/icon-arrow-select.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 40%;
+  background-size: cover;
+}
+.dialog-form .dialog-input::placeholder {
+  color: #708699;
+}
 .dialog-form .dialog-textarea {
+  color: #000;
   min-height: 100px;
   resize: none;
+}
+.dialog-form .dialog-textarea::placeholder {
+  color: #708699;
+  font-size: 12px;
+  line-height: 18px;
 }
 .dialog-form__row {
   position: relative;
