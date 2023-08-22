@@ -941,7 +941,124 @@
               <div class="page-filter__main-items">
                 <div class="page-filter__item">Все бизнесы (8699)</div>
                 <div class="page-filter__item">География (8699)</div>
-                <div class="page-filter__item">Цена</div>
+                <div class="page-filter__box">
+                  <div class="page-filter__item js-btn-price">Цена</div>
+                  <div class="page-filter__popup-price js-open-price-box">
+                    <div class="page-filter__container-top">
+                      <div class="page-filter__container-top-box">
+                        <span class="page-filter__container-item">от</span>
+                        <div class="page-filter__container-price">
+                          <input class="page-filter__input-price" type="text" placeholder="0" />
+                          <div class="header-dpd header-dpd--currency">
+                            <button type="button" class="header-dpd__value header-dpd__main-btn">
+                              pyб. (RUB)
+                            </button>
+                            <div class="header-dpd__body">
+                              <input type="text" placeholder="Поиск" class="header-dpd__search" />
+                              <div class="header-dpd__options">
+                                <button class="header-dpd__btn" type="button" value="EUR">
+                                  € (EUR)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="USD">
+                                  $ (USD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="GBP">
+                                  £ (GBP)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CHF">
+                                  ₣ (CHF)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="RUB">
+                                  руб. (RUB)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AMD">
+                                  AMD
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AUD">
+                                  $ (AUD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AZN">
+                                  AZN
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BGN">
+                                  лв. (BGN)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BRL">
+                                  $ (BRL)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BYN">
+                                  р. (BYN)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CAD">
+                                  $ (CAD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CNY">
+                                  ¥ (CNY)
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="page-filter__container-top-box">
+                        <span class="page-filter__container-item">до</span>
+                        <div class="page-filter__container-price">
+                          <input class="page-filter__input-price" type="text" placeholder="1000" />
+                          <div class="header-dpd header-dpd--currency">
+                            <button type="button" class="header-dpd__value header-dpd__main-btn">
+                              pyб. (RUB)
+                            </button>
+                            <div class="header-dpd__body">
+                              <input type="text" placeholder="Поиск" class="header-dpd__search" />
+                              <div class="header-dpd__options">
+                                <button class="header-dpd__btn" type="button" value="EUR">
+                                  € (EUR)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="USD">
+                                  $ (USD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="GBP">
+                                  £ (GBP)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CHF">
+                                  ₣ (CHF)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="RUB">
+                                  руб. (RUB)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AMD">
+                                  AMD
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AUD">
+                                  $ (AUD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="AZN">
+                                  AZN
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BGN">
+                                  лв. (BGN)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BRL">
+                                  $ (BRL)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="BYN">
+                                  р. (BYN)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CAD">
+                                  $ (CAD)
+                                </button>
+                                <button class="header-dpd__btn" type="button" value="CNY">
+                                  ¥ (CNY)
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="page-filter__item">Еще фильтры</div>
               </div>
             </div>
@@ -2753,6 +2870,14 @@
         const tips = document.querySelectorAll('.tips');
         tips.forEach((item) => item.classList.toggle('is-active'));
       }
+
+      //price popup btn
+      const btnPrice = document.querySelector('.js-btn-price');
+      const priceBox = document.querySelector('.js-open-price-box');
+
+      btnPrice.addEventListener('click', function () {
+        priceBox.classList.toggle('is-active');
+      });
     </script>
   </body>
 

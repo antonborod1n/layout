@@ -136,20 +136,6 @@
   outline: none;
   width: 100%;
 }
-.filter__select {
-  position: relative;
-  background-image: url(../images/icon-arrow-select.svg);
-  background-repeat: no-repeat;
-  background-position: 95% 40%;
-  display: block;
-  padding: 0 8px;
-  width: 90px;
-  outline: none;
-  border: none;
-  appearance: none;
-  cursor: pointer;
-  border-left: 1px solid #d6e0e4;
-}
 .filter .filter__container {
   display: flex;
   justify-content: space-between;
@@ -187,7 +173,6 @@
     flex-wrap: wrap;
   }
 }
-
 .filter .header-dpd__value {
   position: relative;
   background: none;
