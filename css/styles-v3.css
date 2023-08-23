@@ -2268,6 +2268,12 @@ body.is-modal-opened {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 768px) {
+  .mobile-modal__body .side-filter__price-fields {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
 .mobile-modal__body .side-filter__price-field {
   position: relative;
   -webkit-box-flex: 1;
@@ -5982,6 +5988,12 @@ main h1 {
   align-items: center;
   gap: 16px;
 }
+.side-filter__section .page-filter__container-top {
+  gap: 8px;
+}
+.side-filter__section .page-filter__container-item {
+  min-width: 15px;
+}
 .page-filter__container-top-box {
   display: flex;
   align-items: center;
@@ -5993,6 +6005,9 @@ main h1 {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+}
+.side-filter__section .page-filter__container-price {
+  height: 35px;
 }
 .page-filter__container-price {
   display: flex;
@@ -6019,7 +6034,6 @@ main h1 {
   color: #000000;
   width: 100%;
 }
-
 @media (max-width: 950px) {
   .page-filter__popup-price {
     width: 340px;
@@ -6033,6 +6047,7 @@ main h1 {
     flex-wrap: wrap;
   }
 }
+.side-filter__section .header-dpd,
 .page-filter__popup-price .header-dpd {
   position: relative;
   display: -webkit-box;
@@ -6044,6 +6059,7 @@ main h1 {
   margin: 0;
   font-size: 12px;
 }
+.side-filter__section .header-dpd__value,
 .page-filter__popup-price .header-dpd__value {
   position: relative;
   background: none;
@@ -6054,6 +6070,7 @@ main h1 {
   border: none;
   cursor: pointer;
 }
+.side-filter__section .header-dpd__value::after,
 .page-filter__popup-price .header-dpd__value::after {
   content: '';
   position: absolute;
@@ -6066,6 +6083,7 @@ main h1 {
   background-position: 95% 40%;
   background-size: cover;
 }
+.side-filter__section .header-dpd__value::before,
 .page-filter__popup-price .header-dpd__value::before {
   content: '';
   position: absolute;
@@ -6102,6 +6120,7 @@ main h1 {
   border-radius: 0;
   border-bottom: 1px solid silver;
 }
+.side-filter__section .header-dpd__btn,
 .page-filter__popup-price .header-dpd__btn {
   border: none;
   text-align: left;
