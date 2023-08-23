@@ -204,6 +204,7 @@ fieldset {
 }
 input {
   vertical-align: middle;
+  outline-color: #4192d9;
 }
 input[type='text'],
 input[type='email'],
@@ -246,6 +247,7 @@ textarea {
   background: #fff;
   font: 12px/1.5 Arial, sans-serif;
   color: #000000;
+  outline-color: #4192d9;
 }
 select {
   vertical-align: middle;
@@ -1172,7 +1174,6 @@ input:-ms-input-placeholder {
   width: 100px;
   color: #708699;
   text-align: left;
-  outline: none;
   border: none;
   cursor: pointer;
 }
@@ -2491,7 +2492,6 @@ input.mobile-modal__search-input {
   border-radius: 20px;
   border: 0;
   color: #000;
-  outline: none;
   border: 2px solid #fff;
 }
 input.mobile-modal__search-input:focus {
@@ -3096,7 +3096,6 @@ input.side-filter__search-input {
   width: 100%;
   border: 0;
   padding: 0 4px;
-  outline: none;
 }
 .side-subscribe__soc {
   display: -webkit-box;
@@ -3867,9 +3866,14 @@ a.suggestions-carousel__item:hover {
 }
 .faq-modal .faq-item {
   border: 1px solid #d6e0e4;
-  margin-bottom: 8px;
-  border-radius: 3px;
+  margin-bottom: -1px;
   background: #fff;
+}
+.faq-modal .faq-item:first-child {
+  border-radius: 3px 3px 0 0;
+}
+.faq-modal .faq-item:last-child {
+  border-radius: 0 0 3px 3px;
 }
 .faq-modal .faq-item__head {
   position: relative;
@@ -4251,7 +4255,6 @@ div.object-see-other button {
 }
 .field-textarea textarea:focus {
   background: #fff;
-  outline: none;
   border-color: #708699;
 }
 .field-textarea__placeholder {
@@ -4899,7 +4902,6 @@ div.object-see-other button {
   border: 0;
   color: #2d2d2d;
   background: #fff url(../images/icon-search2.svg) 100% 50% no-repeat;
-  outline: none;
 }
 .dialog-cols {
   display: -webkit-box;
@@ -5445,7 +5447,6 @@ body {
   padding: 8px;
   border-radius: 3px;
   border: 1px solid #d6e0e4;
-  outline: none;
 }
 .dialog-btn-teh {
   position: relative;
