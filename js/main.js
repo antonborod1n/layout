@@ -278,4 +278,29 @@ window.addEventListener('DOMContentLoaded', () => {
       item.classList.add('is-active');
     });
   });
+
+  const dialogBtnTeh = document.querySelector('.dialog-btn-problem');
+  const tipsBtns = document.querySelectorAll('.tips__btn');
+  const tips = document.querySelectorAll('.dialog-form__tips ');
+
+  dialogBtnTeh.addEventListener('click', () => {
+    tips.forEach((item) => {
+      item.classList.toggle('is-active');
+    });
+  });
+
+  tipsBtns.forEach((item) => {
+    item.addEventListener('click', () => {
+      let content = item.innerHTML;
+      let val = item.value;
+
+      dialogBtnTeh.innerHTML = content;
+      dialogBtnTeh.setAttribute('value', val);
+      tips.forEach((item) => item.classList.remove('is-active'));
+    });
+  });
+
+  function activeTips() {
+    tips.forEach((item) => item.classList.toggle('is-active'));
+  }
 });
