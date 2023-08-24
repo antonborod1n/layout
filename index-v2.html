@@ -1257,7 +1257,6 @@
                 <div class="listed-item">
                   <div class="listed-item__img">
                     <img src="images/img.png" alt="" />
-
                     <div class="listed-item__img-label">Новое</div>
                   </div>
                   <div class="listed-item__details">
@@ -2066,16 +2065,8 @@
               </div>
             </div>
             <div class="footer-nav__btns">
-              <button type="button" class="btn-footer-help js-open-help" data-id="dialog-help">
-                Помощь
-              </button>
-              <button
-                type="button"
-                class="btn-footer-warn js-open-comp js-open-modal"
-                data-id="dialog-comp"
-              >
-                Пожаловаться
-              </button>
+              <button type="button" class="btn-footer-help js-open-help">Помощь</button>
+              <button type="button" class="btn-footer-warn js-open-comp">Пожаловаться</button>
             </div>
           </div>
         </div>
@@ -2094,6 +2085,7 @@
       </footer>
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js//modals.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <div id="dialog-1" style="display: none">
       <h2>Выбрать сортировку</h2>
@@ -2416,274 +2408,270 @@
       </div>
     </div>
 
-    <div id="dialog-comp" style="display: none">
-      <div class="dialog__inner">
-        <h2 class="dialog__title">Пожаловаться</h2>
-        <div class="dialog__box">
-          <button class="dialog__btn dialog__btn2 js-open-help">Часто задаваемые вопросы</button>
-          <button class="dialog__btn dialog__btn1">Задать свой вопрос</button>
-        </div>
-        <form class="dialog-form" action="#" method="post" enctype="multipart/form-data">
-          <div class="dialog-form__inner">
-            <div class="dialog-form__row">
-              <span class="dialog__subtitle">Что произошло?</span>
-              <div class="dialog-btn-teh" onclick="return activeTips()">Техническая проблема</div>
-              <div class="dialog-form__tips tips">
-                <ul class="tips__list">
-                  <li class="tips__item">
-                    <button class="tips__btn" type="button" value="teh">
-                      Техническая проблема
-                    </button>
-                  </li>
-                  <li class="tips__item">
-                    <button class="tips__btn" type="button" value="comp">Жалоба</button>
-                  </li>
-                  <li class="tips__item">
-                    <button class="tips__btn" type="button" value="upgr">Улучшение сервиса</button>
-                  </li>
-                  <li class="tips__item">
-                    <button class="tips__btn" type="button" value="coll">Сотрудничество</button>
-                  </li>
-                  <li class="tips__item">
-                    <button class="tips__btn" type="button" value="other">Прочее</button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="dialog-form__row">
-              <span class="dialog__subtitle">Чем мы можем вам помочь? <span>*</span></span>
-              <textarea
-                class="dialog-input dialog-textarea"
-                id="userHelp"
-                type="text"
-                placeholder="Введите текст"
-                name="user-text"
-                required
-              ></textarea>
-            </div>
-            <div class="dialog-form__row">
-              <span class="dialog__subtitle">Ваша почта:</span>
-              <input
-                class="dialog-input"
-                id="userEmail"
-                type="email"
-                placeholder="ivan@mail.ru"
-                name="user-email"
-              />
-            </div>
-            <div class="dialog__bottom">
-              <div class="dialog-form__row">
-                <input class="dialog-form__file" type="file" name="user-file" />
-                <button class="dialog__form__file-btn" type="button">Выберите файл</button>
-              </div>
-              <button class="dialog-btn__submit btn2">Отправить</button>
-            </div>
+    <div class="modal modal-c">
+      <div class="modal-comp">
+        <div class="dialog__inner">
+          <h2 class="dialog__title">Пожаловаться</h2>
+          <button type="button" class="c-dialog__close close-c"></button>
+          <div class="dialog__box">
+            <button class="dialog__btn dialog__btn2 js-change-help">
+              Часто задаваемые вопросы
+            </button>
+            <button class="dialog__btn dialog__btn1">Задать свой вопрос</button>
           </div>
-        </form>
+          <form class="dialog-form" action="#" method="post" enctype="multipart/form-data">
+            <div class="dialog-form__inner">
+              <div class="dialog-form__row">
+                <span class="dialog__subtitle">Что произошло?</span>
+                <button class="dialog-btn-problem" value="teh" type="button">
+                  Техническая проблема
+                </button>
+                <div class="dialog-form__tips tips">
+                  <ul class="tips__list">
+                    <li class="tips__item">
+                      <button class="tips__btn" type="button" value="teh">
+                        Техническая проблема
+                      </button>
+                    </li>
+                    <li class="tips__item">
+                      <button class="tips__btn" type="button" value="comp">Жалоба</button>
+                    </li>
+                    <li class="tips__item">
+                      <button class="tips__btn" type="button" value="upgr">
+                        Улучшение сервиса
+                      </button>
+                    </li>
+                    <li class="tips__item">
+                      <button class="tips__btn" type="button" value="coll">Сотрудничество</button>
+                    </li>
+                    <li class="tips__item">
+                      <button class="tips__btn" type="button" value="other">Прочее</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dialog-form__row">
+                <span class="dialog__subtitle">Чем мы можем вам помочь? <span>*</span></span>
+                <textarea
+                  class="dialog-input dialog-textarea"
+                  id="userHelp"
+                  type="text"
+                  placeholder="Введите текст"
+                  name="user-text"
+                  required
+                ></textarea>
+              </div>
+              <div class="dialog-form__row">
+                <span class="dialog__subtitle">Ваша почта:</span>
+                <input
+                  class="dialog-input"
+                  id="userEmail"
+                  type="email"
+                  placeholder="ivan@mail.ru"
+                  name="user-email"
+                />
+              </div>
+              <div class="dialog__bottom">
+                <div class="dialog-form__row">
+                  <input class="dialog-form__file" type="file" name="user-file" />
+                  <button class="dialog__form__file-btn" type="button">Выберите файл</button>
+                </div>
+                <button class="dialog-btn__submit btn2" type="submit">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 
-    <div id="dialog-help" style="display: none">
-      <div class="dialog__inner">
-        <h2 class="dialog__title">Помощь</h2>
-        <div class="dialog__box">
-          <button class="dialog__btn dialog__btn1">Часто задаваемые вопросы</button>
-          <button class="dialog__btn dialog__btn2 js-open-comp">Задать свой вопрос</button>
+    <div class="modal modal-h">
+      <div class="modal-help">
+        <div class="dialog__inner">
+          <h2 class="dialog__title">Помощь</h2>
+          <button type="button" class="c-dialog__close close-h"></button>
+          <div class="dialog__box">
+            <button class="dialog__btn dialog__btn1">Часто задаваемые вопросы</button>
+            <button class="dialog__btn dialog__btn2 js-change-comp">Задать свой вопрос</button>
+          </div>
+          <div class="faq faq-modal">
+            <div class="faq-item">
+              <button type="button" class="faq-item__head is-expanded">
+                Как связаться с продавцом
+              </button>
+              <div class="faq-item__body" style="display: block">
+                <p>
+                  B лeвoй чacти aктивнoгo oбъявлeния ecть блoк для cвязи c пpoдaвцoм. Ecли в
+                  oбъявлeнии тeлeфoн нe yкaзaн, тo вы мoжeтe нaпиcaть eмy cooбщeниe. Baшe cooбщeниe
+                  гapaнтиpoвaннo дoйдeт дo пpoдaвцa. Mы oтпpaвляeм вaшe cooбщeниe нe тoлькo пo
+                  пoчтe, нo и пo cмc.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">Объявления актуальны?</button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">Как подать свое объявление?</button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">
+                Сколько стоит публикация на сайте?
+              </button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">Какова посещаемость сайта?</button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">
+                Как быстро объявление будет опубликовано?
+              </button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">Как внести правки в объявление?</button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">Как поменять основной телефон?</button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">
+                Как изменить статус с посредника на собственника?
+              </button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">
+                Как удалить свой аккаунт на сайте?
+              </button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">Как отключить автопродление?</button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">
+                Как восстановить пароль к личному кабинету?
+              </button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">Как оплатить с расчетного счета?</button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">
+                Предоставляете закрывающие документы?
+              </button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" class="faq-item__head">
+                Оказываете ли вы услуги по сопровождению сделки?
+              </button>
+              <div class="faq-item__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad
+                  quod deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus
+                  amet minima excepturi nesciunt molestias, cumque ab quos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="dialog__text">
+            He нaшли oтвeт cpeди cтaндapтныx вoпpocoв?
+            <a class="dialog__link" href="#">Пoпpoбyйтe зaдaть cвoй</a>
+          </p>
         </div>
-        <div class="faq faq-modal">
-          <div class="faq-item">
-            <button type="button" class="faq-item__head is-active">
-              Как связаться с продавцом
-            </button>
-            <div class="faq-item__body is-active">
-              <p>
-                B лeвoй чacти aктивнoгo oбъявлeния ecть блoк для cвязи c пpoдaвцoм. Ecли в
-                oбъявлeнии тeлeфoн нe yкaзaн, тo вы мoжeтe нaпиcaть eмy cooбщeниe. Baшe cooбщeниe
-                гapaнтиpoвaннo дoйдeт дo пpoдaвцa. Mы oтпpaвляeм вaшe cooбщeниe нe тoлькo пo пoчтe,
-                нo и пo cмc.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Объявления актуальны?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Как подать свое объявление?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Сколько стоит публикация на сайте?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Какова посещаемость сайта?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">
-              Как быстро объявление будет опубликовано?
-            </button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Как внести правки в объявление?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Как поменять основной телефон?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">
-              Как изменить статус с посредника на собственника?
-            </button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Как удалить свой аккаунт на сайте?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Как отключить автопродление?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">
-              Как восстановить пароль к личному кабинету?
-            </button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Как оплатить с расчетного счета?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">
-              Предоставляете закрывающие документы?
-            </button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">
-              Оказываете ли вы услуги по сопровождению сделки?
-            </button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Работаете ли вы за комиссию?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button type="button" class="faq-item__head">Кто может помочь с продажей?</button>
-            <div class="faq-item__body">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ad quod
-                deleniti, ducimus exercitationem velit dicta sapiente veniam iure porro natus amet
-                minima excepturi nesciunt molestias, cumque ab quos.
-              </p>
-            </div>
-          </div>
-        </div>
-        <p class="dialog__text">
-          He нaшли oтвeт cpeди cтaндapтныx вoпpocoв?
-          <a class="dialog__link" href="#">Пoпpoбyйтe зaдaть cвoй</a>
-        </p>
       </div>
     </div>
 
@@ -2815,6 +2803,7 @@
           });
         });
       });
+
       //кнопка плюс
       const widget = document.querySelector('.side-add-btn');
       const desc = document.querySelector('.side-add-btn__desc');
@@ -2878,8 +2867,27 @@
         tips.forEach((item) => item.classList.remove('is-active'));
       }
 
+      const dialogBtnTeh = document.querySelector('.dialog-btn-problem');
+      const tipsBtns = document.querySelectorAll('.tips__btn');
+      const tips = document.querySelectorAll('.dialog-form__tips ');
+
+      dialogBtnTeh.addEventListener('click', () => {
+        tips.forEach((item) => {
+          item.classList.toggle('is-active');
+        });
+      });
+
+      tipsBtns.forEach((item) => {
+        item.addEventListener('click', () => {
+          let a = item.innerHTML;
+          let val = item.value;
+          console.log(val);
+          dialogBtnTeh.innerHTML = a;
+          dialogBtnTeh.setAttribute('value', val);
+        });
+      });
+
       function activeTips() {
-        const tips = document.querySelectorAll('.tips');
         tips.forEach((item) => item.classList.toggle('is-active'));
       }
     </script>

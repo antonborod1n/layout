@@ -252,20 +252,6 @@ $(function () {
           overlayClose: !1,
         });
       })
-      .on('click', '.js-open-help', function () {
-        ADialog({
-          html: document.getElementById('dialog-help').innerHTML,
-          className: 'dialog-modal',
-          overlayClose: !1,
-        });
-      })
-      .on('click', '.js-open-comp', function () {
-        ADialog({
-          html: document.getElementById('dialog-comp').innerHTML,
-          className: 'dialog-modal',
-          overlayClose: !1,
-        });
-      })
       .on('click', '.js-open-register', function () {
         ADialog({
           html: document.getElementById('dialog-register').innerHTML,
