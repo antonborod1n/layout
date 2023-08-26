@@ -6011,9 +6011,6 @@ main h1 {
   font-weight: 400;
   line-height: 18px;
 }
-.side-filter__section .page-filter__container-price {
-  height: 35px;
-}
 .page-filter__container-price {
   display: flex;
   align-items: center;
@@ -6031,13 +6028,13 @@ main h1 {
   border: 1px solid #d6e0e4;
 }
 .page-filter__container-price input[type='text'].page-filter__input-price {
+  width: 100%;
   padding: 6px 8px;
   border: none;
   border-radius: 0px;
   background: transparent;
   font: 12px/1.5 Arial, sans-serif;
   color: #000000;
-  width: 100%;
 }
 @media (max-width: 950px) {
   .page-filter__popup-price {
