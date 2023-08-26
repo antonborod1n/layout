@@ -3030,7 +3030,6 @@ input.side-filter__search-input {
   -ms-flex-align: center;
   align-items: center;
   margin: 15px 0;
-  padding: 6px 2px 5px;
   border: 1px solid #d6e0e4;
   border-radius: 3px;
 }
@@ -3047,7 +3046,7 @@ input.side-filter__search-input {
   flex-grow: 1;
   width: 100%;
   border: 0;
-  padding: 0 4px;
+  padding: 6px 5px 5px;
 }
 .side-subscribe__soc {
   display: -webkit-box;
@@ -3715,10 +3714,6 @@ a.suggestions-carousel__item:hover {
     margin-bottom: 16px;
     font-size: 12px;
     line-height: 18px;
-  }
-  .listed-item__action {
-    margin-right: -30px;
-    padding: 0 0 5px;
   }
   .listed-item__side-btns {
     top: 14px;
@@ -4954,7 +4949,6 @@ div.object-see-other button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5px 4px;
   border: 1px solid #d6e0e4;
   border-radius: 3px;
 }
@@ -4966,7 +4960,7 @@ div.object-see-other button {
   text-align: right;
 }
 .dialog-login__field.dialog-login__field-tel .dialog-login__input input {
-  padding: 5px 5px;
+  padding: 10px 15px;
   border: 0;
 }
 .dialog-login__field.dialog-login__field-required label::after {
@@ -5647,6 +5641,12 @@ main h1 {
   background: #f3f3f4;
   border-color: #f3f3f4;
   font-weight: bold;
+}
+@media (max-width: 768px) {
+  .listed-item__action {
+    margin-right: -30px;
+    padding: 0 0 5px;
+  }
 }
 @media (max-width: 375px) {
   .listed-item__action .btn-primary {

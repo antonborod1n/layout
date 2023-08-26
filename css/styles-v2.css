@@ -3084,7 +3084,6 @@ input.side-filter__search-input {
   -ms-flex-align: center;
   align-items: center;
   margin: 15px 0;
-  padding: 6px 2px 5px;
   border: 1px solid #d6e0e4;
   border-radius: 3px;
 }
@@ -3101,7 +3100,7 @@ input.side-filter__search-input {
   flex-grow: 1;
   width: 100%;
   border: 0;
-  padding: 0 4px;
+  padding: 6px 5px 5px;
 }
 .side-subscribe__soc {
   display: -webkit-box;
@@ -4999,7 +4998,6 @@ div.object-see-other button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5px 4px;
   border: 1px solid #d6e0e4;
   border-radius: 3px;
 }
@@ -5011,7 +5009,7 @@ div.object-see-other button {
   text-align: right;
 }
 .dialog-login__field.dialog-login__field-tel .dialog-login__input input {
-  padding: 5px 5px;
+  padding: 10px 15px;
   border: 0;
 }
 .dialog-login__field.dialog-login__field-required label::after {
