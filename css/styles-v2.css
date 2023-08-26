@@ -803,7 +803,7 @@ input:-ms-input-placeholder {
 }
 .meta-item--region {
   padding-left: 20px;
-  background: url(../images/icon-house2.svg) 0 1px no-repeat;
+  background: url(../images/icon-house2.svg) 0 0 no-repeat;
 }
 .with-dpd {
   position: relative;
@@ -1061,7 +1061,7 @@ input:-ms-input-placeholder {
 .header-usernav__user::after {
   content: '';
   position: absolute;
-  top: 18px;
+  top: 17px;
   right: 12px;
   border: 1px solid #fff;
   border-width: 8px 4px 0 4px;
@@ -1161,7 +1161,7 @@ input:-ms-input-placeholder {
   right: 0;
   width: 14px;
   height: 14px;
-  background: url(../images/icon-chevron-sprite.svg#shadeSm) 50%/16px 16px no-repeat;
+  background: url(../images/icon-arrow-down.svg) 50%/16px 16px no-repeat;
 }
 
 .side-filter__price-fields .header-dpd {
@@ -1953,15 +1953,15 @@ input:-ms-input-placeholder {
   color: #708699;
 }
 .footer-nav__link-house {
-  padding-left: 24px;
+  padding: 2px 0 2px 24px;
   background: url(../images/icon-house.svg) 0/16px no-repeat;
 }
 .footer-nav__link-business {
-  padding-left: 24px;
+  padding: 2px 0 2px 24px;
   background: url(../images/icon-business.svg) 0/16px no-repeat;
 }
 .footer-nav__link-supply {
-  padding-left: 24px;
+  padding: 2px 0 2px 24px;
   background: url(../images/icon-settings.svg) 0/16px no-repeat;
 }
 .footer-nav__btns {
@@ -3705,30 +3705,20 @@ a.suggestions-carousel__item:hover {
   width: 24px;
   height: 24px;
   border: 0;
+  background-color: transparent;
+  transition: all 0.3s;
 }
-.icon-btn__fav {
-  background: url(../images/icon-fav-sprite.svg#default) 50%/16px 16px no-repeat;
+.icon__btn:hover svg path {
+  fill: #4192d9;
 }
-.icon-btn__fav:hover {
-  background-image: url(../images/icon-fav-sprite.svg#hover);
+.icon__btn.icon-btn__warning:hover svg path {
+  fill: #f24831;
 }
-.icon-btn__compare {
-  background: url(../images/icon-stats-chart-sprite.svg#default) 50%/16px 16px no-repeat;
+.icon__btn.is-active svg path {
+  fill: #4192d9;
 }
-.icon-btn__compare:hover {
-  background-image: url(../images/icon-stats-chart-sprite.svg#hover);
-}
-.icon-btn__hide {
-  background: url(../images/icon-hide-sprite.svg#default) 50%/16px 16px no-repeat;
-}
-.icon-btn__hide:hover {
-  background-image: url(../images/icon-hide-sprite.svg#hover);
-}
-.icon-btn__warning {
-  background: url(../images/icon-warning-sprite.svg#default) 50%/16px 16px no-repeat;
-}
-.icon-btn__warning:hover {
-  background-image: url(../images/icon-warning-sprite.svg#hover);
+.icon__btn.is-active.icon-btn__warning svg path {
+  fill: #f24831;
 }
 .listed-item__action {
   padding: 9px 0;
