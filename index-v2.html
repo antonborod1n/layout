@@ -3008,11 +3008,15 @@
       const btnBack = document.querySelectorAll('.mobile-modal__back');
       const searchInputs = document.querySelectorAll('.mobile-modal__search-input');
       const searchTips = document.querySelectorAll('.search-tips');
+      const searchBtn = document.querySelectorAll('.mobile-modal__search-btn');
 
       btnBack.forEach((el) => {
         el.addEventListener('click', function () {
           searchInputs.forEach((item) => {
             item.value = '';
+          });
+          searchBtn.forEach((item) => {
+            item.classList.remove('is-active');
           });
           searchTips.forEach((item) => {
             item.classList.remove('is-active');
