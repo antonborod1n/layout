@@ -2426,40 +2426,31 @@ body.is-modal-opened {
 .mobile-modal__accordion.is-active .mobile-modal__options {
   display: block;
 }
-.mobile-modal__search {
-  margin-bottom: 15px;
-  padding: 10px 15px;
-  background: #fff;
-  border-radius: 20px;
-}
+
 .mobile-modal .mobile-modal__search {
   margin-bottom: 0px;
 }
 input.mobile-modal__search-input {
   display: block;
   width: 100%;
-  padding: 1px;
+  padding: 10px 15px;
+  border-radius: 20px;
   border: 0;
   color: #000;
+  border: 2px solid #fff;
 }
-
 .mobile-modal__body-box {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
 .mobile-modal__search {
-  padding: 10px 15px;
   background: #fff;
   border-radius: 20px;
   flex-grow: 1;
 }
-input.mobile-modal__search-input {
-  display: block;
-  width: 100%;
-  padding: 1px;
-  border: 0;
-  color: #000;
+input.mobile-modal__search-input:focus {
+  border: 2px solid #4192d9;
 }
 .mobile-modal__search-btn.btn2 {
   position: absolute;
@@ -6049,6 +6040,15 @@ main h1 {
     flex-wrap: wrap;
   }
 }
+.side-filter__section .side-filter__section-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.side-filter__section .side-filter__section-box .side-filter__h {
+  margin-bottom: 0;
+}
+
 .side-filter__section .header-dpd,
 .page-filter__popup-price .header-dpd {
   position: relative;
@@ -6065,8 +6065,8 @@ main h1 {
 .page-filter__popup-price .header-dpd__value {
   position: relative;
   background: none;
-  padding: 6px 6px 6px 14px;
-  width: 100px;
+  padding: 6px;
+  width: 90px;
   color: #708699;
   text-align: left;
   border: none;
@@ -6085,7 +6085,6 @@ main h1 {
   background-position: 95% 40%;
   background-size: cover;
 }
-.side-filter__section .header-dpd__value::before,
 .page-filter__popup-price .header-dpd__value::before {
   content: '';
   position: absolute;

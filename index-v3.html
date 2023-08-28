@@ -260,89 +260,6 @@
         </div>
       </header>
 
-      <div class="mobile-modal" id="modal-currency">
-        <div class="mobile-modal__head">
-          <h2>валюта</h2>
-          <button class="mobile-modal__back" type="button" data-close-modal=""></button>
-        </div>
-        <div class="mobile-modal__body">
-          <ul class="mobile-modal__options">
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">руб. (RUB)</span>
-              </label>
-            </li>
-
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">$ (USD)</span>
-              </label>
-            </li>
-
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">€ (EUR)</span>
-              </label>
-            </li>
-
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">£ (GBP)</span>
-              </label>
-            </li>
-
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">$ (AUD)</span>
-              </label>
-            </li>
-
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">лв. (BGN)</span>
-              </label>
-            </li>
-
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">$ (BRL)</span>
-              </label>
-            </li>
-
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">$ (CAD)</span>
-              </label>
-            </li>
-
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">Br (BYN)</span>
-              </label>
-            </li>
-
-            <li>
-              <label class="field-radio">
-                <input type="radio" name="currency" />
-                <span class="field-radio__label">¥ (CNY)</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-        <div class="mobile-modal__foot">
-          <button type="button" class="btn-primary">Выбрать</button>
-        </div>
-      </div>
-
       <div class="mobile-modal" id="modal-lang">
         <div class="mobile-modal__head">
           <h2>язык</h2>
@@ -444,68 +361,23 @@
             </li>
           </ul>
           <div class="side-filter__section">
-            <h4 class="side-filter__h">Цена, руб.</h4>
+            <div class="side-filter__section-box">
+              <h4 class="side-filter__h">Цена,</h4>
+              <button type="button" class="header-dpd__value" data-open-modal="modal-currency">
+                pyб. (RUB)
+              </button>
+            </div>
             <div class="page-filter__container-top">
               <div class="page-filter__container-top-box">
                 <span class="page-filter__container-item">от</span>
                 <div class="page-filter__container-price">
                   <input class="page-filter__input-price" type="text" placeholder="0" />
-                  <div class="header-dpd header-dpd--currency">
-                    <button type="button" class="header-dpd__value header-dpd__main-btn">
-                      pyб. (RUB)
-                    </button>
-                    <div class="header-dpd__body">
-                      <input type="text" placeholder="Поиск" class="header-dpd__search" />
-                      <div class="header-dpd__options">
-                        <button class="header-dpd__btn" type="button" value="EUR">€ (EUR)</button>
-                        <button class="header-dpd__btn" type="button" value="USD">$ (USD)</button>
-                        <button class="header-dpd__btn" type="button" value="GBP">£ (GBP)</button>
-                        <button class="header-dpd__btn" type="button" value="CHF">₣ (CHF)</button>
-                        <button class="header-dpd__btn" type="button" value="RUB">
-                          руб. (RUB)
-                        </button>
-                        <button class="header-dpd__btn" type="button" value="AMD">AMD</button>
-                        <button class="header-dpd__btn" type="button" value="AUD">$ (AUD)</button>
-                        <button class="header-dpd__btn" type="button" value="AZN">AZN</button>
-                        <button class="header-dpd__btn" type="button" value="BGN">лв. (BGN)</button>
-                        <button class="header-dpd__btn" type="button" value="BRL">$ (BRL)</button>
-                        <button class="header-dpd__btn" type="button" value="BYN">р. (BYN)</button>
-                        <button class="header-dpd__btn" type="button" value="CAD">$ (CAD)</button>
-                        <button class="header-dpd__btn" type="button" value="CNY">¥ (CNY)</button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div class="page-filter__container-top-box">
                 <span class="page-filter__container-item">до</span>
                 <div class="page-filter__container-price">
                   <input class="page-filter__input-price" type="text" placeholder="1000" />
-                  <div class="header-dpd header-dpd--currency">
-                    <button type="button" class="header-dpd__value header-dpd__main-btn">
-                      pyб. (RUB)
-                    </button>
-                    <div class="header-dpd__body">
-                      <input type="text" placeholder="Поиск" class="header-dpd__search" />
-                      <div class="header-dpd__options">
-                        <button class="header-dpd__btn" type="button" value="EUR">€ (EUR)</button>
-                        <button class="header-dpd__btn" type="button" value="USD">$ (USD)</button>
-                        <button class="header-dpd__btn" type="button" value="GBP">£ (GBP)</button>
-                        <button class="header-dpd__btn" type="button" value="CHF">₣ (CHF)</button>
-                        <button class="header-dpd__btn" type="button" value="RUB">
-                          руб. (RUB)
-                        </button>
-                        <button class="header-dpd__btn" type="button" value="AMD">AMD</button>
-                        <button class="header-dpd__btn" type="button" value="AUD">$ (AUD)</button>
-                        <button class="header-dpd__btn" type="button" value="AZN">AZN</button>
-                        <button class="header-dpd__btn" type="button" value="BGN">лв. (BGN)</button>
-                        <button class="header-dpd__btn" type="button" value="BRL">$ (BRL)</button>
-                        <button class="header-dpd__btn" type="button" value="BYN">р. (BYN)</button>
-                        <button class="header-dpd__btn" type="button" value="CAD">$ (CAD)</button>
-                        <button class="header-dpd__btn" type="button" value="CNY">¥ (CNY)</button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -671,6 +543,89 @@
         </div>
         <div class="mobile-modal__foot">
           <button type="button" class="btn-primary">Смотреть</button>
+        </div>
+      </div>
+
+      <div class="mobile-modal" id="modal-currency">
+        <div class="mobile-modal__head">
+          <h2>валюта</h2>
+          <button class="mobile-modal__back" type="button" data-close-modal=""></button>
+        </div>
+        <div class="mobile-modal__body">
+          <ul class="mobile-modal__options">
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">руб. (RUB)</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">$ (USD)</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">€ (EUR)</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">£ (GBP)</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">$ (AUD)</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">лв. (BGN)</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">$ (BRL)</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">$ (CAD)</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">Br (BYN)</span>
+              </label>
+            </li>
+
+            <li>
+              <label class="field-radio">
+                <input type="radio" name="currency" />
+                <span class="field-radio__label">¥ (CNY)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-modal__foot">
+          <button type="button" class="btn-primary">Выбрать</button>
         </div>
       </div>
 
