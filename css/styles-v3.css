@@ -3753,7 +3753,7 @@ a.suggestions-carousel__item:hover {
   right: 6px;
   width: 36px;
   height: 36px;
-  background: url(../images/icon-chevron-sprite.svg#gray) 50% no-repeat;
+  background: url(../images/icon-chevron-grey.svg) 50% no-repeat;
   background-size: 24px;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -5334,15 +5334,14 @@ body {
 }
 .faq-item__head::after {
   right: 1px;
-  background: url(../images/icon-chevron-sprite.svg#shade2) 50%/24px 24px no-repeat;
+  background: url(../images/icon-chevron-grey.svg) 50%/18px 18px no-repeat;
   opacity: 1;
   -webkit-transform: rotate(0);
   transform: rotate(0);
 }
 .faq-item__head.is-expanded::after {
-  background: url(../images/icon-chevron-sprite.svg#shade) 50%/24px 24px no-repeat;
-  -webkit-transform: rotate(0);
-  transform: rotate(0);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .faq-modal .faq-item__head::after {
   content: url('../images/icon-arrow-bottom.svg');
