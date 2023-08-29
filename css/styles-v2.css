@@ -553,7 +553,7 @@ input:-ms-input-placeholder {
 .btn-w-edit {
   padding-left: 20px;
   border: 0;
-  background: url(../images/icon-edit.svg) 0 2px/11px no-repeat;
+  background: url(../images/icon-edit1.svg) 0 0px/12px no-repeat;
   font-size: 12px;
   color: #708699;
 }
@@ -2146,7 +2146,7 @@ input:-ms-input-placeholder {
   width: 20px;
   height: 20px;
   border: 0;
-  background: url(../images/icon-chevron-sprite.svg#blue) 50% no-repeat;
+  background: url(../images/icon-chevron-grey-left.svg) 50% no-repeat;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -3165,7 +3165,7 @@ input.side-filter__search-input {
   position: absolute;
   top: 50%;
   margin-top: -10px;
-  background-image: url(../images/icon-chevron-sprite.svg#gray);
+  background-image: url(../images/icon-chevron-grey-left.svg);
 }
 .small-carousel__btn-prev {
   left: -25px;
@@ -3327,9 +3327,9 @@ a.suggestions-carousel__item:hover {
   padding-bottom: 8px;
 }
 .suggestions-carousel__meta .meta-item {
-  padding-left: 14px;
-  background-size: 10px;
-  background-position: 0 4px;
+  padding-left: 20px;
+  background-size: 16px;
+  background-position: 0 0;
 }
 .suggestions-carousel__price {
   font-size: 14px;
@@ -4824,9 +4824,9 @@ div.object-see-other button {
 }
 .c-dialog__close::before {
   content: '';
-  width: 16px;
-  height: 16px;
-  background: url(../images/icon-close-sprite.svg#gray2) 50%/16px no-repeat;
+  width: 12px;
+  height: 12px;
+  background: url(../images/icon-close.svg) 50%/12px no-repeat;
 }
 .c-dialog__foot {
   display: -webkit-box;
@@ -5238,7 +5238,10 @@ body {
 .suggestions-carousel__meta .meta-item.meta-item--business {
   width: 100%;
 }
-.carousel__btn-prev {
+.suggestions-carousel__meta .meta-item.meta-item--subway {
+  background-position: 0 2px;
+}
+/* .carousel__btn-prev {
   -webkit-transform: rotate(0);
   transform: rotate(0);
   background: url(../images/icon-chevron-sprite.svg#left) 50%/20px 20px no-repeat;
@@ -5248,6 +5251,10 @@ body {
   transform: rotate(0);
   background: url(../images/icon-chevron-sprite.svg#right) 50%/20px 20px no-repeat;
 }
+.carousel__btn-prev:hover svg path,
+.carousel__btn-next:hover svg path {
+  fill: #4192d9;
+} */
 .small-carousel__btn-prev,
 .small-carousel__btn-next {
   top: 0;
@@ -5681,7 +5688,7 @@ body {
   border: 1px solid silver;
 }
 .side-filter__section .header-dpd--currency .header-dpd__body {
-  min-width: 100px;
+  min-width: 91px;
 }
 .side-filter__section .header-dpd--lang .header-dpd__body {
   min-width: 140px;
