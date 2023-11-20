@@ -120,7 +120,7 @@ body {
 body {
   font: 13px/1.54 Arial, sans-serif;
   color: #000;
-  background: #fff;
+  background: #fcfcfd;
 }
 a {
   color: #4192d9;
@@ -547,7 +547,7 @@ input:-ms-input-placeholder {
 .btn-w-edit {
   padding-left: 20px;
   border: 0;
-  background: url(../images/icon-edit.svg) 0 2px/11px no-repeat;
+  background: url(../images/icon-edit1.svg) 0 2px/11px no-repeat;
   font-size: 12px;
   color: #708699;
 }
@@ -584,6 +584,13 @@ input:-ms-input-placeholder {
 }
 .star-rate--filled-5::before {
   width: 80px;
+}
+.star-rate-num {
+  color: #708699;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }
 .field-chk input[type='checkbox'] {
   position: absolute;
@@ -3259,9 +3266,9 @@ a.suggestions-carousel__item:hover {
   padding-bottom: 8px;
 }
 .suggestions-carousel__meta .meta-item {
-  padding-left: 14px;
-  background-size: 10px;
-  background-position: 0 4px;
+  padding-left: 16px;
+  background-size: 12px;
+  background-position: 0 3px;
 }
 .suggestions-carousel__price {
   font-size: 14px;
@@ -3876,16 +3883,35 @@ div.object-see-other {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 11px 12px 15px;
 }
 div.object-see-other a {
   margin-right: auto;
 }
+.object-see-other .box {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 div.object-see-other button {
-  margin-left: 9px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+  width: 100%;
+  white-space: nowrap;
+  padding-left: 20px;
+}
+div.object-see-other button.icon-btn__fav {
+  background: url(../images/icon-fav.svg) 0%/16px 16px no-repeat;
+}
+div.object-see-other button.icon-btn__warning {
+  background: url(../images/icon-warning.svg) 0%/16px 16px no-repeat;
+}
+div.object-see-other button span {
+  color: #4192d9;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }
 .object-main-info {
   margin-bottom: 58px;
@@ -4047,8 +4073,8 @@ div.object-see-other button {
   width: 100%;
 }
 .contact-form--aside .contact-form__body .field-textarea textarea {
-  height: 158px;
-  min-height: 158px;
+  height: 159px;
+  min-height: 159px;
 }
 .contact-form--aside .contact-form__details h4 {
   text-transform: uppercase;
@@ -4076,8 +4102,8 @@ div.object-see-other button {
 .field-textarea__placeholder {
   position: absolute;
   inset: 0;
-  padding: 10px 15px;
-  font-size: 11px;
+  padding: 8px;
+  font-size: 12px;
   line-height: 18px;
   color: #708699;
   overflow: hidden;
@@ -4103,18 +4129,18 @@ div.object-see-other button {
   background-image: url(../images/icon-star.svg);
 }
 .control-like {
-  background-image: url(../images/icon-like.svg);
+  background-image: url(../images/icon-like1.svg);
 }
 .control-dislike {
-  background-image: url(../images/icon-like.svg);
+  background-image: url(../images/icon-like1.svg);
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
 }
 .control-edit {
-  background-image: url(../images/icon-edit2.svg);
+  background-image: url(../images/icon-edit3.svg);
 }
 .control-delete {
-  background-image: url(../images/icon-trash.svg);
+  background-image: url(../images/icon-delete.svg);
 }
 .mobile-page-nav {
   display: none;
@@ -4202,6 +4228,12 @@ div.object-see-other button {
   }
   .object-see-other {
     margin-top: 15px;
+  }
+  div.object-see-other button span {
+    display: none;
+  }
+  .object-see-other .box {
+    gap: 19px;
   }
   .object-main-info__head {
     margin-bottom: 0;
@@ -4295,21 +4327,15 @@ div.object-see-other button {
   align-items: flex-start;
   padding-top: 11px;
 }
-.comments-item__body-head .comments-item__controls {
-  margin-top: -3px;
-}
-.comments-item__body-head .comments-item__controls .control-btn {
-  margin: 0 1px;
-}
 .comments-item__author {
-  margin-right: 40px;
+  margin-right: 16px;
 }
 .comments-item__name {
-  margin-bottom: 5px;
+  font-weight: 700;
 }
-.comments-item__loc {
-  font-size: 12px;
-  color: #708699;
+.comments-item__box {
+  display: flex;
+  gap: 4px;
 }
 .comments-item__date {
   margin-right: 20px;
@@ -4323,14 +4349,25 @@ div.object-see-other button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 16px;
   margin-top: -5px;
 }
-.comments-item__likes-count {
+.comments-item__likes-box {
+  display: flex;
+  align-items: center;
+}
+.comments-item__likes-count,
+.comments-item__dislike-count {
   margin: 0 5px;
+  color: #708699;
+  line-height: 15px;
+}
+.comments-item__likes-dots {
+  margin-left: auto;
 }
 .comments-item__body-mid {
-  padding: 11px 0 9px;
-  line-height: 25px;
+  padding: 9px 0 14px;
+  line-height: 20px;
 }
 .comments-item__body-foot {
   display: -webkit-box;
@@ -4339,6 +4376,7 @@ div.object-see-other button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 16px;
   margin-right: -4px;
   font-size: 12px;
   color: #708699;
@@ -4366,7 +4404,7 @@ div.object-see-other button {
 @media (max-width: 768px) {
   .comments-wrap {
     margin-bottom: 15px;
-    padding: 14px;
+    padding: 14px 14px 0 14px;
     border: 1px solid #d6e0e4;
     border-radius: 3px;
   }
@@ -4381,6 +4419,9 @@ div.object-see-other button {
     margin-right: 20px;
     border: 0;
   }
+.comments-item__likes-first {
+  margin-top: 15px;
+}
   .comments-item__photo-a {
     width: 40px;
     height: 40px;
@@ -4390,6 +4431,7 @@ div.object-see-other button {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    flex-direction: column;
     padding-top: 0;
     font-size: 12px;
   }
@@ -4399,11 +4441,8 @@ div.object-see-other button {
   .comments-item__date {
     margin: 0;
   }
-  .comments-item__loc {
-    font-size: 11px;
-  }
   .comments-item__body-mid {
-    padding: 11px 0 9px;
+    padding: 11px 0 17px;
     font-size: 11px;
     line-height: 16px;
   }
@@ -4412,7 +4451,8 @@ div.object-see-other button {
     padding-top: 15px;
     border-top: 1px solid #d6e0e4;
   }
-  .comments-indent .comments-item__body-mid {
+  .comments-indent .comments-item__body-mid,
+  .comments-indent .comments-item__body-foot {
     padding-left: 60px;
   }
   .comments__buttons {
@@ -4428,8 +4468,7 @@ div.object-see-other button {
     margin-bottom: 10px;
   }
   .comments-item__body-head .comments-item__space,
-  .comments-item__controls,
-  .comments-item__likes {
+  .comments-item__controls {
     display: none;
   }
 }
@@ -4453,7 +4492,7 @@ div.object-see-other button {
   margin: -2px;
   padding: 2px 2px 2px 23px;
   border: 0;
-  background: url(../images/icon-edit.svg) 2px 5px no-repeat;
+  background: url(../images/icon-edit1.svg) 2px 5px no-repeat;
   font-size: 12px;
   color: #708699;
 }
