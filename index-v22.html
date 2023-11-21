@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Asset</title>
-    <link href="css/critical-v22.css" rel="stylesheet" />
+    <link href="css/styles-v2.css" rel="stylesheet" />
   </head>
   <body>
     <div class="page">
@@ -2922,15 +2922,6 @@
     </style>
 
     <script>
-      function loadStyle(href) {
-        let link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = href;
-        document.body.appendChild(link);
-      }
-
-      loadStyle('css/styles-v22.css');
-
       $(function () {
         const filename = window.location.pathname.split('https://wefr.net/').pop();
         $('.dev-block__pages a').each((i, el) => {
