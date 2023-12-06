@@ -3270,6 +3270,10 @@ a.suggestions-carousel__item:hover {
   background-size: 12px;
   background-position: 0 3px;
 }
+.suggestions-carousel__meta .meta-item.meta-item--subway {
+  background-size: 10px;
+  background-position: 0 4px;
+}
 .suggestions-carousel__price {
   font-size: 14px;
   font-weight: 700;
