@@ -407,7 +407,7 @@ input:-ms-input-placeholder {
   min-width: 1%;
 }
 .page-layout__main h1 {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .page-level-info {
   margin-bottom: 15px;
@@ -2181,6 +2181,7 @@ input:-ms-input-placeholder {
 .carousel-with-dots__item img {
   display: block;
   width: 100%;
+  object-fit: cover;
 }
 .carousel-with-dots__pager {
   display: -webkit-box;
@@ -3790,29 +3791,31 @@ a.suggestions-carousel__item:hover {
   display: none;
 }
 .breadcrumbs-bottom {
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   text-align: right;
   color: #708699;
 }
 .object-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  margin: 24px 0;
 }
 .object-images img {
   display: block;
   width: 100%;
 }
 .object-images__previews {
-  display: flex;
-  gap: 16px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-right: 20px;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
+.object-images__preview {
+  margin-bottom: 16px;
+}
 .object-images__preview img {
   width: 67px;
   height: 67px;
@@ -3820,26 +3823,28 @@ a.suggestions-carousel__item:hover {
   object-fit: cover;
 }
 .object-images__view {
-  width: 370px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 .object-metabar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-direction: column;
-  gap: 4px;
-}
-.object-metabar-box {
-  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .object-metabar__price {
-  margin-right: 16px;
-  font-size: 20px;
+  margin-right: 24px;
+  font-size: 25px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 1;
 }
 .object-metabar__label {
-  margin-right: 8px;
+  margin-right: 16px;
   padding: 4px 8px;
   background: #4192d9;
   border-radius: 3px;
@@ -3855,10 +3860,16 @@ a.suggestions-carousel__item:hover {
   background: url(../images/icon-payphone.svg) no-repeat;
 }
 .object-metabar__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  gap: 24px;
+  margin-right: -20px;
+}
+.object-metabar__btns button {
+  margin-right: 20px;
 }
 .metabar__btn {
   background-color: transparent;
@@ -3870,13 +3881,10 @@ a.suggestions-carousel__item:hover {
 .metabar__btn.metabar__btn-warning:hover svg path {
   fill: #f24831;
 }
-/* .object-metabar__btns button {
-  background-size: 18px;
-} */
 .object-see-other {
   display: block;
-  margin: 24px 0 24px;
-  padding: 8px;
+  margin: 30px 0 37px;
+  padding: 15px;
   border: 1px solid #d6e0e4;
   border-radius: 3px;
   font-size: 12px;
@@ -3889,41 +3897,19 @@ div.object-see-other {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  justify-content: space-between;
   align-items: center;
   padding: 12px 11px 12px 15px;
 }
 div.object-see-other a {
   margin-right: auto;
 }
-.object-see-other .box {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
 div.object-see-other button {
-  width: 100%;
-  white-space: nowrap;
-  padding-left: 20px;
-}
-div.object-see-other button.icon-btn__fav {
-  background: url(../images/icon-fav.svg) 0%/16px 16px no-repeat;
-}
-div.object-see-other button.icon-btn__warning {
-  background: url(../images/icon-warning.svg) 0%/16px 16px no-repeat;
-}
-div.object-see-other button span {
-  color: #4192d9;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
+  margin-left: 9px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 .object-main-info {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 58px;
 }
 .object-inner {
   display: flex;
@@ -3936,55 +3922,51 @@ div.object-see-other button span {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .object-main-info__head h2 {
-  font-size: 13px;
-  line-height: 20px;
-  font-weight: 700;
+  margin-right: auto;
+  padding-bottom: 6px;
+  border-bottom: 4px solid #4192d9;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 .object-main-info__inf {
-  font-size: 12px;
-  line-height: 18px;
   color: #708699;
 }
 .object-main-info__cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 4px;
-  margin-bottom: 16px;
+}
+.object-main-info__col {
+  width: 40%;
 }
 .object-main-info__elem {
-  display: flex;
-  gap: 4px;
+  padding: 13px 0 10px;
+}
+.object-main-info__elem + .object-main-info__elem {
+  border-top: 1px solid #d6e0e4;
 }
 .object-main-info__elem-label {
-  font-size: 12px;
-  line-height: 18px;
   margin-bottom: 5px;
 }
 .object-main-info__elem-value {
-  font-size: 12px;
-  line-height: 18px;
   font-weight: bold;
   color: #4192d9;
 }
 .object-social {
+  margin: 70px 0;
   font-size: 12px;
-  line-height: 18px;
-  color: #708699;
-}
-.object-social-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  text-align: right;
 }
 .object-social p {
-  font-size: 12px;
-  line-height: 18px;
-  margin-bottom: 16px;
+  margin-bottom: 9px;
 }
 .object-social__fb,
 .object-social__vk {
@@ -3992,6 +3974,7 @@ div.object-see-other button span {
   vertical-align: middle;
   width: 25px;
   height: 25px;
+  margin-left: 7px;
   background: url(../images/icon-soc-fb.svg) no-repeat;
 }
 .object-social__vk {
@@ -4232,10 +4215,11 @@ div.object-see-other button span {
     width: 36px;
     height: 36px;
   }
-  .object-metabar {
-    flex-direction: row;
-    align-items: center;
-    margin-right: -8px;
+  .object-metabar__btns {
+    margin-right: 0;
+  }
+  .object-metabar__btns button {
+    margin-right: 0;
   }
   .object-metabar__price {
     margin-right: 8px;
@@ -4247,12 +4231,6 @@ div.object-see-other button span {
   }
   .object-see-other {
     margin-top: 15px;
-  }
-  div.object-see-other button span {
-    display: none;
-  }
-  .object-see-other .box {
-    gap: 19px;
   }
   .object-main-info__head {
     margin-bottom: 0;
