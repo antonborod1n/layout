@@ -3804,6 +3804,7 @@ a.suggestions-carousel__item:hover {
 .object-images img {
   display: block;
   width: 100%;
+  object-fit: cover;
 }
 .object-images__previews {
   -ms-flex-negative: 0;
